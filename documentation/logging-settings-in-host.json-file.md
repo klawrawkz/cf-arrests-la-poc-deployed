@@ -1,0 +1,1 @@
+[host.json reference for Azure Functions 2.x and later](https://docs.microsoft.com/en-us/azure/azure-functions/functions-host-json#logging)
