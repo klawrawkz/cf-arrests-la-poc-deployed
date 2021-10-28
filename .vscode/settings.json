@@ -3,8 +3,8 @@
     "azureLogicAppsStandard.deploySubpath": "bin/Release/netcoreapp3.1/publish",
     "azureLogicAppsStandard.projectLanguage": "C#",
     "azureLogicAppsStandard.projectRuntime": "~3",
-    "debug.internalConsoleOptions": "openOnSessionStart",
-    "azureFunctions.suppressProject": false,
+    "debug.internalConsoleOptions": "neverOpen",
+    "azureFunctions.suppressProject": true,
     "markdownlint.config": {
         "MD028": false,
         "MD025": {

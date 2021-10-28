@@ -58,7 +58,7 @@
 				"--configuration",
 				"Release",
 				"/property:GenerateFullPaths=true",
-				"consoleloggerparameters:PerformanceSummary;Summary;ShowEventId;ShowCommandLine -verbosity:diagnostic"
+				"/consoleloggerparameters:PerformanceSummary;Summary;ShowEventId;ShowCommandLine -verbosity:diagnostic"
 			],
 			"type": "process",
 			"dependsOn": "clean release",
