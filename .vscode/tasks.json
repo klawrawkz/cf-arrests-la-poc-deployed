@@ -16,7 +16,7 @@
 			"args": [
 				"clean",
 				"/property:GenerateFullPaths=true",
-				"/consoleloggerparameters:NoSummary"
+				"/consoleloggerparameters:PerformanceSummary;Summary;ShowEventId;ShowCommandLine -verbosity:diagnostic"
 			],
 			"type": "process",
 			"problemMatcher": "$msCompile"
@@ -27,7 +27,7 @@
 			"args": [
 				"build",
 				"/property:GenerateFullPaths=true",
-				"/consoleloggerparameters:NoSummary"
+				"/consoleloggerparameters:PerformanceSummary;Summary;ShowEventId;ShowCommandLine -verbosity:diagnostic"
 			],
 			"type": "process",
 			"dependsOn": "clean",
@@ -45,7 +45,7 @@
 				"--configuration",
 				"Release",
 				"/property:GenerateFullPaths=true",
-				"/consoleloggerparameters:NoSummary"
+				"/consoleloggerparameters:PerformanceSummary;Summary;ShowEventId;ShowCommandLine -verbosity:diagnostic"
 			],
 			"type": "process",
 			"problemMatcher": "$msCompile"
@@ -55,10 +55,10 @@
 			"command": "dotnet",
 			"args": [
 				"publish",
-				"--configuration",
+				"--overwrite-settings -y --configuration",
 				"Release",
 				"/property:GenerateFullPaths=true",
-				"/consoleloggerparameters:NoSummary"
+				"consoleloggerparameters:PerformanceSummary;Summary;ShowEventId;ShowCommandLine -verbosity:diagnostic"
 			],
 			"type": "process",
 			"dependsOn": "clean release",
