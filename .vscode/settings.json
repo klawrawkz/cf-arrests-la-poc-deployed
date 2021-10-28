@@ -1,7 +1,7 @@
 {
     "cmake.configureOnOpen": false,
-    "azureLogicAppsStandard.deploySubpath": ".",
-    "azureLogicAppsStandard.projectLanguage": "JavaScript",
+    "azureLogicAppsStandard.deploySubpath": "bin/Release/netcoreapp3.1/publish",
+    "azureLogicAppsStandard.projectLanguage": "C#",
     "azureLogicAppsStandard.projectRuntime": "~3",
     "debug.internalConsoleOptions": "neverOpen",
     "azureFunctions.suppressProject": true,
@@ -10,5 +10,6 @@
         "MD025": {
             "front_matter_title": ""
         }
-    }
+    },
+    "azureLogicAppsStandard.preDeployTask": "publish"
 }
