@@ -1,0 +1,21 @@
+<publishData>
+        <publishProfile 
+            profileName="cfMonitoredArrestsLapp - Web Deploy" 
+            publishMethod="MSDeploy" 
+            publishUrl="cfmonitoredarrestslapp.scm.azurewebsites.net:443" 
+            msdeploySite="cfMonitoredArrestsLapp" 
+            userName="$cfMonitoredArrestsLapp" 
+            userPWD="Aovw2MnyhctbKKeiqtae4WaFdRkxKSXJnXMHf2xTNGnzA7HE7Z1YwvHiMLDC" 
+            destinationAppUrl="http://cfmonitoredarrestslapp.azurewebsites.net" 
+            SQLServerDBConnectionString="" 
+            mySQLDBConnectionString="" 
+            hostingProviderForumLink="" 
+            controlPanelLink="http://windows.azure.com" 
+            webSystem="WebSites">
+        <databases /></publishProfile>
+        <publishProfile profileName="cfMonitoredArrestsLapp - FTP" publishMethod="FTP" publishUrl="ftp://waws-prod-bn1-111.ftp.azurewebsites.windows.net/site/wwwroot" ftpPassiveMode="True" userName="cfMonitoredArrestsLapp\$cfMonitoredArrestsLapp" userPWD="Aovw2MnyhctbKKeiqtae4WaFdRkxKSXJnXMHf2xTNGnzA7HE7Z1YwvHiMLDC" destinationAppUrl="http://cfmonitoredarrestslapp.azurewebsites.net" SQLServerDBConnectionString="" mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="http://windows.azure.com" webSystem="WebSites">
+        <databases /></publishProfile>
+        <publishProfile profileName="cfMonitoredArrestsLapp - Zip Deploy" publishMethod="ZipDeploy" publishUrl="cfmonitoredarrestslapp.scm.azurewebsites.net:443" userName="$cfMonitoredArrestsLapp" userPWD="Aovw2MnyhctbKKeiqtae4WaFdRkxKSXJnXMHf2xTNGnzA7HE7Z1YwvHiMLDC" destinationAppUrl="http://cfmonitoredarrestslapp.azurewebsites.net" SQLServerDBConnectionString="" mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="http://windows.azure.com" webSystem="WebSites">
+        <databases />
+    </publishProfile>
+</publishData>
