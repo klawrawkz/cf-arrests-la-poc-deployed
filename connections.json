@@ -6,7 +6,7 @@
         "type": "QueryString",
         "value": "@appsetting('azureFunctionOperation_functionAppKey')"
       },
-      "displayName": "cf-conn-send-grid-email-func-poc-001",
+      "displayName": "sandboxFunctionConn",
       "function": {
         "id": "/subscriptions/ab603228-3612-44fb-8847-c844cc805171/resourceGroups/CF_SANDBOX_RG/providers/Microsoft.Web/sites/sandboxclearforcefunctionsv3/functions/SendGridTemplateFunction"
       },
