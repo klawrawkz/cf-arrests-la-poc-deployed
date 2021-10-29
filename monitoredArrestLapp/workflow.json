@@ -1,10 +1,410 @@
 {
-  "definition": {
-    "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
-    "actions": {},
-    "contentVersion": "1.0.0.0",
-    "outputs": {},
-    "triggers": {}
-  },
-  "kind": "Stateful"
+    "definition": {
+        "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+        "actions": {
+            "Delete_message": {
+                "type": "ApiConnection",
+                "inputs": {
+                    "host": {
+                        "connection": {
+                            "referenceName": "azurequeues_2"
+                        }
+                    },
+                    "method": "delete",
+                    "path": "/@{encodeURIComponent('arrests')}/messages/@{encodeURIComponent(triggerBody()?['MessageId'])}",
+                    "queries": {
+                        "popreceipt": "@triggerBody()?['PopReceipt']"
+                    }
+                },
+                "runAfter": {
+                    "Error_Check": [
+                        "Skipped"
+                    ]
+                }
+            },
+            "Email_Array": {
+                "type": "InitializeVariable",
+                "inputs": {
+                    "variables": [
+                        {
+                            "name": "emails",
+                            "type": "Array"
+                        }
+                    ]
+                },
+                "runAfter": {}
+            },
+            "Error_Check": {
+                "type": "Scope",
+                "actions": {
+                    "Failed_3_Times": {
+                        "type": "If",
+                        "expression": {
+                            "and": [
+                                {
+                                    "greater": [
+                                        "@int(triggerBody()['dequeuecount'])",
+                                        3
+                                    ]
+                                }
+                            ]
+                        },
+                        "actions": {
+                            "Move_to_Error_Queue": {
+                                "type": "ApiConnection",
+                                "inputs": {
+                                    "host": {
+                                        "connection": {
+                                            "referenceName": "azurequeues_2"
+                                        }
+                                    },
+                                    "method": "post",
+                                    "body": "@triggerBody()?['MessageText']",
+                                    "path": "/@{encodeURIComponent('arrests-errors')}/messages"
+                                },
+                                "runAfter": {}
+                            },
+                            "Remove_from_processing_queue": {
+                                "type": "ApiConnection",
+                                "inputs": {
+                                    "host": {
+                                        "connection": {
+                                            "referenceName": "azurequeues_2"
+                                        }
+                                    },
+                                    "method": "delete",
+                                    "path": "/@{encodeURIComponent('arrests')}/messages/@{encodeURIComponent(triggerBody()?['MessageId'])}",
+                                    "queries": {
+                                        "popreceipt": "@triggerBody()?['PopReceipt']"
+                                    }
+                                },
+                                "runAfter": {
+                                    "Move_to_Error_Queue": [
+                                        "Succeeded"
+                                    ]
+                                }
+                            }
+                        },
+                        "runAfter": {}
+                    },
+                    "Send_an_email_(V2)": {
+                        "type": "ApiConnection",
+                        "inputs": {
+                            "host": {
+                                "connection": {
+                                    "referenceName": "office365_1"
+                                }
+                            },
+                            "method": "post",
+                            "body": {
+                                "To": "@{parameters('notification_email_Recipients')}",
+                                "Subject": "Clearforce: Failure in the arrests Logic app.",
+                                "Body": "<p>A message failed to process:<br>\n<br>\n@{triggerBody()?['MessageText']}</p>"
+                            },
+                            "path": "/v2/Mail"
+                        },
+                        "runAfter": {
+                            "Failed_3_Times": [
+                                "Succeeded"
+                            ]
+                        }
+                    }
+                },
+                "runAfter": {
+                    "Try_Scope": [
+                        "Failed",
+                        "Skipped",
+                        "TimedOut"
+                    ]
+                }
+            },
+            "Init_url": {
+                "type": "InitializeVariable",
+                "inputs": {
+                    "variables": [
+                        {
+                            "name": "url",
+                            "type": "String"
+                        }
+                    ]
+                },
+                "runAfter": {
+                    "Email_Array": [
+                        "Succeeded"
+                    ]
+                }
+            },
+            "Initialize_variable": {
+                "type": "InitializeVariable",
+                "inputs": {
+                    "variables": [
+                        {
+                            "name": "CompanyID",
+                            "type": "Integer"
+                        }
+                    ]
+                },
+                "runAfter": {
+                    "Init_url": [
+                        "Succeeded"
+                    ]
+                }
+            },
+            "Initialize_variable_2": {
+                "type": "InitializeVariable",
+                "inputs": {
+                    "variables": [
+                        {
+                            "name": "companyOk",
+                            "type": "integer"
+                        }
+                    ]
+                },
+                "runAfter": {
+                    "Parse_JSON": [
+                        "Succeeded"
+                    ]
+                }
+            },
+            "Parse_JSON": {
+                "type": "ParseJson",
+                "inputs": {
+                    "content": "@replace(triggerBody()?['MessageText'],'\\','')",
+                    "schema": {
+                        "type": "object"
+                    }
+                },
+                "runAfter": {
+                    "Initialize_variable": [
+                        "Succeeded"
+                    ]
+                }
+            },
+            "Terminate": {
+                "type": "Terminate",
+                "inputs": {
+                    "runStatus": "Succeeded"
+                },
+                "runAfter": {
+                    "Delete_message": [
+                        "Succeeded"
+                    ]
+                }
+            },
+            "Try_Scope": {
+                "type": "Scope",
+                "actions": {
+                    "Company_Exists": {
+                        "type": "ApiConnection",
+                        "inputs": {
+                            "host": {
+                                "connection": {
+                                    "referenceName": "sql_1"
+                                }
+                            },
+                            "method": "post",
+                            "body": {
+                                "CompanyID": "@body('Parse_JSON')?['clientBillingId']",
+                                "EmployeeGUID": "@{body('Parse_JSON')?['senderId']}"
+                            },
+                            "path": "/datasets/default/procedures/@{encodeURIComponent(encodeURIComponent('[dbo].[usp_CheckCompany]'))}"
+                        },
+                        "runAfter": {}
+                    },
+                    "Condition": {
+                        "type": "If",
+                        "expression": {
+                            "and": [
+                                {
+                                    "equals": [
+                                        "@variables('companyOk')",
+                                        1
+                                    ]
+                                }
+                            ]
+                        },
+                        "actions": {
+                            "Compose": {
+                                "type": "Compose",
+                                "inputs": {
+                                    "Subject": "Arrest Alert",
+                                    "TemplateId": "8ff03937-0688-43ae-860e-c06ff07c1efb",
+                                    "TemplateParameters": [
+                                        {
+                                            "key": "-message-",
+                                            "value": "A new arrest alert was received."
+                                        },
+                                        {
+                                            "key": "-link-",
+                                            "value": "@variables('url')"
+                                        },
+                                        {
+                                            "key": "-button-",
+                                            "value": "View Alert"
+                                        }
+                                    ],
+                                    "To": "@variables('emails')"
+                                },
+                                "runAfter": {
+                                    "Set_Url": [
+                                        "Succeeded"
+                                    ]
+                                }
+                            },
+                            "For_each": {
+                                "type": "Foreach",
+                                "foreach": "@body('Get_Emails')?['resultsets']?['Table1']",
+                                "actions": {
+                                    "Append_to_array_variable": {
+                                        "type": "AppendToArrayVariable",
+                                        "inputs": {
+                                            "name": "emails",
+                                            "value": "@items('For_each')?['Email']"
+                                        },
+                                        "runAfter": {}
+                                    }
+                                },
+                                "runAfter": {
+                                    "Get_Emails": [
+                                        "Succeeded"
+                                    ]
+                                }
+                            },
+                            "Get_Emails": {
+                                "type": "ApiConnection",
+                                "inputs": {
+                                    "host": {
+                                        "connection": {
+                                            "referenceName": "sql_1"
+                                        }
+                                    },
+                                    "method": "post",
+                                    "body": {
+                                        "CompanyID": "@body('Parse_JSON')?['clientBillingId']",
+                                        "Role": "Analyst"
+                                    },
+                                    "path": "/datasets/default/procedures/@{encodeURIComponent(encodeURIComponent('[dbo].[usp_EmailsForRole]'))}"
+                                },
+                                "runAfter": {
+                                    "Insert_Statistic": [
+                                        "Succeeded"
+                                    ]
+                                }
+                            },
+                            "Insert_Statistic": {
+                                "type": "ApiConnection",
+                                "inputs": {
+                                    "host": {
+                                        "connection": {
+                                            "referenceName": "sql_1"
+                                        }
+                                    },
+                                    "method": "post",
+                                    "body": {
+                                        "SystemStatisticTypeID": 2,
+                                        "Label": "Arrest Alert Received",
+                                        "CreatedDate": "@{utcNow()}"
+                                    },
+                                    "path": "/datasets/default/tables/@{encodeURIComponent(encodeURIComponent('[dbo].[SystemStatistics]'))}/items"
+                                },
+                                "runAfter": {
+                                    "Insert_into_Service_Results": [
+                                        "Succeeded"
+                                    ]
+                                }
+                            },
+                            "Insert_into_Service_Results": {
+                                "type": "ApiConnection",
+                                "inputs": {
+                                    "host": {
+                                        "connection": {
+                                            "referenceName": "sql_1"
+                                        }
+                                    },
+                                    "method": "post",
+                                    "body": {
+                                        "query": "Declare @guid UniqueIdentifier, @createdDate datetime2, @results nvarchar(max), @empId int, @senderID nvarchar(max),@companyid int, @expDate datetime2\nSET @GUID = '@{triggerBody()?['MessageId']}'\nSET @createdDate = '@{formatDateTime(triggerBody()?['InsertionTime'])}'\nSET @results = '@{body('Parse_JSON')?['personMatches']?[0]}'\nSET @empId = @{body('Parse_JSON')?['correlationId']} \nSET @senderID = '@{body('Parse_JSON')?['senderId']}' \nSET @companyid = @{body('Parse_JSON')?['clientBillingId']} \nSET @expDate = '@{addDays(utcNow(),90)}' \ninsert into ServiceResults(ServiceResultGUID, ServiceResultTypeID,CreatedDate,Results,EmployeeID,ServiceSenderID,CompanyID,ExpirationDate)\nvalues(@guid,1,@createdDate,@results, @empId, @senderID, @companyid,@expDate)"
+                                    },
+                                    "path": "/v2/datasets/@{encodeURIComponent(encodeURIComponent('default'))},@{encodeURIComponent(encodeURIComponent('default'))}/query/sql"
+                                },
+                                "runAfter": {}
+                            },
+                            "Send_Grid_Template_Function": {
+                                "type": "Function",
+                                "inputs": {
+                                    "method": "post",
+                                    "body": "@outputs('Compose')",
+                                    "function": {
+                                        "connectionName": "azureFunctionOperation"
+                                    }
+                                },
+                                "runAfter": {
+                                    "Compose": [
+                                        "Succeeded"
+                                    ]
+                                }
+                            },
+                            "Set_Url": {
+                                "type": "SetVariable",
+                                "inputs": {
+                                    "name": "url",
+                                    "value": "@{body('Get_Emails')?['resultsets']?['Table1']?[0]?['AssignedUrl']}"
+                                },
+                                "runAfter": {
+                                    "For_each": [
+                                        "Succeeded"
+                                    ]
+                                }
+                            }
+                        },
+                        "runAfter": {
+                            "Set_variable": [
+                                "Succeeded"
+                            ]
+                        }
+                    },
+                    "Set_variable": {
+                        "type": "SetVariable",
+                        "inputs": {
+                            "name": "companyOk",
+                            "value": "@body('Company_Exists')?['resultsets']?['Table1']?[0]?['Column1']"
+                        },
+                        "runAfter": {
+                            "Company_Exists": [
+                                "Succeeded"
+                            ]
+                        }
+                    }
+                },
+                "runAfter": {
+                    "Initialize_variable_2": [
+                        "Succeeded"
+                    ]
+                }
+            }
+        },
+        "triggers": {
+            "When_there_are_messages_in_a_queue": {
+                "type": "ApiConnection",
+                "inputs": {
+                    "host": {
+                        "connection": {
+                            "referenceName": "azurequeues_2"
+                        }
+                    },
+                    "method": "get",
+                    "path": "/v2/storageAccounts/@{encodeURIComponent(encodeURIComponent('sandboxclearforceapi'))}/queues/@{encodeURIComponent('arrests')}/message_trigger"
+                },
+                "recurrence": {
+                    "frequency": "Second",
+                    "interval": 45
+                },
+                "conditions": [],
+                "splitOn": "@triggerBody()?['QueueMessagesList']?['QueueMessage']"
+            }
+        },
+        "contentVersion": "1.0.0.0",
+        "outputs": {}
+    },
+    "kind": "Stateful"
 }
