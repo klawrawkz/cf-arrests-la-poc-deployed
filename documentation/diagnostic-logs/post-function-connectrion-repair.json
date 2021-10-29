@@ -1,0 +1,1527 @@
+2021-10-29T06: 12: 17Z   [Verbose
+]   Job debug message: correlationId='48811600-f456-4a8d-aca0-ab8630aa41d3', operationName='FlowRetryableJobCallback.GetApiHubHttpAuthentication', jobPartition='817B0DFF4FAE4E7F873702450CADAD2A', jobId='FlowTriggerJob-WHEN: 5FTHERE: 5FARE: 5FMESSAGES: 5FIN: 5FA: 5FQUEUE', message='Calling apiHub APIM endpoint using connection key-based authentication provided in connection reference to target uri 'https: //8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/azurequeues/f93a9bac22154b389a0d00acc30a03c2/v2/storageAccounts/sandboxclearforceapi/queues/arrests/message_trigger'.', exception='<null>', organizationId='', activityVector='IN.10', additionalProperties='{"ParentActivityId":"00-41542582eb25ce4589949d0f5d68e030-8e4230f56deb3047-00"}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='e6f795f5-1a44-493d-b52e-2136d79785bf'.
+2021-10-29T06: 12: 17Z   [Verbose
+]   Debug message: correlationId='48811600-f456-4a8d-aca0-ab8630aa41d3', operationName='EdgeOAuthTokenProvider.GetToken', message='Retrive token from local managed identity store for workflow app system assigned managed identity with authenticationUri: http: //127.0.0.1:41850/MSI/token/ resource: https://management.core.windows.net/', exception='<null>', organizationId='', activityVector='IN.10', additionalProperties='{"ParentActivityId":"00-41542582eb25ce4589949d0f5d68e030-8e4230f56deb3047-00"}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='e6f795f5-1a44-493d-b52e-2136d79785bf'.
+2021-10-29T06: 12: 17Z   [Verbose
+]   Outgoing HTTP request starts: correlationId='48811600-f456-4a8d-aca0-ab8630aa41d3', operationName='GET/MSI/', httpMethod='GET', hostName='127.0.0.1', targetUri='http: //127.0.0.1:41850/MSI/token/?resource=https%3a%2f%2fmanagement.core.windows.net%2f&api-version=2019-08-01', clientRequestId='c42d7cfe09614c57af5899252ad675b5', clientSessionId='', clientApplicationId='', apiVersion='2019-08-01', contentLength='-1', serviceRequestId='', durationInMilliseconds='-1', httpStatusCode='-1', exceptionMessage='', errorCode='', errorMessage='', referer='<null>', failureCause='', contentType='', contentEncoding='', armServiceRequestId='', organizationId='', activityVector='IN.11', locale='', additionalProperties='{"ParentActivityId":"00-41542582eb25ce4589949d0f5d68e030-8e4230f56deb3047-00"}', targetResourceProvider='', targetResourceType='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='e6f795f5-1a44-493d-b52e-2136d79785bf'.
+2021-10-29T06: 12: 17Z   [Verbose
+]   Outgoing HTTP request succeeded: correlationId='48811600-f456-4a8d-aca0-ab8630aa41d3', operationName='GET/MSI/', httpMethod='GET', hostName='127.0.0.1', targetUri='http: //127.0.0.1:41850/MSI/token/?resource=https%3a%2f%2fmanagement.core.windows.net%2f&api-version=2019-08-01', clientRequestId='c42d7cfe09614c57af5899252ad675b5', clientSessionId='', clientApplicationId='', apiVersion='2019-08-01', contentLength='1656', serviceRequestId='', durationInMilliseconds='1', httpStatusCode='200', exceptionMessage='', errorCode='', errorMessage='', referer='<null>', failureCause='', contentType='', contentEncoding='', armServiceRequestId='', organizationId='', activityVector='IN.11', locale='', additionalProperties='{"ParentActivityId":"00-41542582eb25ce4589949d0f5d68e030-8e4230f56deb3047-00"}', targetResourceProvider='', targetResourceType='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='e6f795f5-1a44-493d-b52e-2136d79785bf'.
+2021-10-29T06: 12: 17Z   [Verbose
+]   Debug message: correlationId='48811600-f456-4a8d-aca0-ab8630aa41d3', operationName='EdgeOAuthTokenProvider.GetManagedIdentityToken', message='Successfully retrived managed identity oauth token for authenticationUri: http: //127.0.0.1:41850/MSI/token/ resource: https://management.core.windows.net/ tokenType Bearer', exception='<null>', organizationId='', activityVector='IN.12', additionalProperties='{"ParentActivityId":"00-41542582eb25ce4589949d0f5d68e030-8e4230f56deb3047-00"}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='e6f795f5-1a44-493d-b52e-2136d79785bf'.
+2021-10-29T06: 12: 17Z   [Verbose
+]   Debug message: correlationId='48811600-f456-4a8d-aca0-ab8630aa41d3', operationName='HttpRequestMessageExtensions.AddOAuthHeader', message='Sending request to 'https: //8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/' using OAuth with tenantId 'WorkflowAppSystemAssignedManagedIdentityTenant', clientId 'WorkflowAppSystemAssignedManagedIdentityClient' and audience 'https://management.core.windows.net/'.', exception='<null>', organizationId='', activityVector='IN.12', additionalProperties='{"ParentActivityId":"00-41542582eb25ce4589949d0f5d68e030-8e4230f56deb3047-00"}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='e6f795f5-1a44-493d-b52e-2136d79785bf'.
+2021-10-29T06: 12: 17Z   [Verbose
+]   Outgoing HTTP request starts: correlationId='48811600-f456-4a8d-aca0-ab8630aa41d3', operationName='CallApiHubEndpoint.Trigger.CustomApi/azurequeues', httpMethod='GET', hostName='8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net', targetUri='https: //8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/azurequeues/f93a9bac22154b389a0d00acc30a03c2/v2/storageAccounts/sandboxclearforceapi/queues/arrests/message_trigger', clientRequestId='e6f795f5-1a44-493d-b52e-2136d79785bf', clientSessionId='', clientApplicationId='', apiVersion='', contentLength='-1', serviceRequestId='', durationInMilliseconds='-1', httpStatusCode='-1', exceptionMessage='', errorCode='', errorMessage='', referer='<null>', failureCause='', contentType='', contentEncoding='', armServiceRequestId='', organizationId='', activityVector='IN.13', locale='en-US', additionalProperties='{"ParentActivityId":"00-41542582eb25ce4589949d0f5d68e030-8e4230f56deb3047-00"}', targetResourceProvider='', targetResourceType='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='e6f795f5-1a44-493d-b52e-2136d79785bf'.
+2021-10-29T06: 12: 17Z   [Verbose
+]   Outgoing HTTP request succeeded: correlationId='48811600-f456-4a8d-aca0-ab8630aa41d3', operationName='CallApiHubEndpoint.Trigger.CustomApi/azurequeues', httpMethod='GET', hostName='8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net', targetUri='https: //8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/azurequeues/f93a9bac22154b389a0d00acc30a03c2/v2/storageAccounts/sandboxclearforceapi/queues/arrests/message_trigger', clientRequestId='e6f795f5-1a44-493d-b52e-2136d79785bf', clientSessionId='', clientApplicationId='', apiVersion='', contentLength='0', serviceRequestId='bf8a56c2-c003-0003-7f8b-cc52a7000000', durationInMilliseconds='15', httpStatusCode='202', exceptionMessage='', errorCode='', errorMessage='', referer='<null>', failureCause='', contentType='', contentEncoding='', armServiceRequestId='', organizationId='', activityVector='IN.13', locale='en-US', additionalProperties='{"ParentActivityId":"00-41542582eb25ce4589949d0f5d68e030-8e4230f56deb3047-00"}', targetResourceProvider='', targetResourceType='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='e6f795f5-1a44-493d-b52e-2136d79785bf'.
+2021-10-29T06: 12: 17Z   [Verbose
+]   Job debug message: correlationId='48811600-f456-4a8d-aca0-ab8630aa41d3', operationName='FlowRetryableTriggerJobCallback.HandleResponseMessage', jobPartition='817B0DFF4FAE4E7F873702450CADAD2A', jobId='FlowTriggerJob-WHEN: 5FTHERE: 5FARE: 5FMESSAGES: 5FIN: 5FA: 5FQUEUE', message='Received response with continuation. Original request uri: 'https: //8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/azurequeues/f93a9bac22154b389a0d00acc30a03c2/v2/storageAccounts/sandboxclearforceapi/queues/arrests/message_trigger'. Location header: 'https://8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/azurequeues/f93a9bac22154b389a0d00acc30a03c2/v2/storageAccounts/sandboxclearforceapi/queues/arrests/message_trigger'. Retry-after header: '60'.', exception='<null>', organizationId='', activityVector='IN.14', additionalProperties='{"ParentActivityId":"00-41542582eb25ce4589949d0f5d68e030-8e4230f56deb3047-00"}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='e6f795f5-1a44-493d-b52e-2136d79785bf'.
+2021-10-29T06: 12: 17Z   [Verbose
+]   Job debug message: correlationId='48811600-f456-4a8d-aca0-ab8630aa41d3', operationName='FlowRecurrentTriggerJobCallback.UploadTriggerResultAndStartRun', jobPartition='817B0DFF4FAE4E7F873702450CADAD2A', jobId='FlowTriggerJob-WHEN: 5FTHERE: 5FARE: 5FMESSAGES: 5FIN: 5FA: 5FQUEUE', message='Completed execution of trigger callback. Status: 'Skipped'. Code: 'Accepted'. JobExecutionStatus: 'Succeeded'. Job version '1'.', exception='<null>', organizationId='', activityVector='IN.14', additionalProperties='{
+    "ParentActivityId": "00-41542582eb25ce4589949d0f5d68e030-8e4230f56deb3047-00"
+}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='e6f795f5-1a44-493d-b52e-2136d79785bf'.
+    2021-10-29T06: 12: 17Z   [Verbose
+]   Job debug message: correlationId='', operationName='JobCallback.ExecuteAsync', jobPartition='817B0DFF4FAE4E7F873702450CADAD2A', jobId='FlowTriggerJob-WHEN: 5FTHERE: 5FARE: 5FMESSAGES: 5FIN: 5FA: 5FQUEUE', message='Background job operation 'ApiConnectionTriggerJob' completed with status 'Succeeded', message 'Accepted' and details '<null>' '21' milliseconds from start.', exception='<null>', organizationId='', activityVector='', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='e6f795f5-1a44-493d-b52e-2136d79785bf'.
+    2021-10-29T06: 12: 17Z   [Verbose
+]   Storage operation completed: correlationId='48811600-f456-4a8d-aca0-ab8630aa41d3', operationName='StorageDataProvider.Save.FlowTriggerHistory', accountName='storageaccountcfappb9ca', resourceType='table', resourceName='floweaffb5a68d273cf1452a520ba20957histories', clientRequestId='a4314c4c-10f7-43b6-b909-39fa60d4df7a', operationStatus='RanToCompletion', durationInMilliseconds='8', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 204,
+        "httpStatusMessage": "No Content",
+        "etag": "W/\u0022datetime\u00272021-10-29T06%3A12%3A16.9188869Z\u0027\u0022",
+        "serviceRequestID": "989e79b2-a002-0057-308b-cc45ab000000",
+        "startTime": "2021-10-29T06:12:16.9113214Z",
+        "endTime": "2021-10-29T06:12:16.9199418Z"
+    }
+]', organizationId='', activityVector='IN.11', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='e6f795f5-1a44-493d-b52e-2136d79785bf'.
+    2021-10-29T06: 12: 17Z   [Information
+]   Workflow trigger ends. flowName='monitoredArrestLapp', triggerName='When_there_are_messages_in_a_queue', flowId='817b0dff4fae4e7f873702450cadad2a', flowSequenceId='08585661195587651819', status='Skipped', statusCode='Accepted', error='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', durationInMilliseconds='21', flowRunSequenceId='', inputsContentSize='153', outputsContentSize='548', clientTrackingId='08585661189485881870986871296CU00', properties='{
+    "$schema": "2016-06-01",
+    "startTime": "2021-10-29T06:12:16.8893985Z",
+    "endTime": "2021-10-29T06:12:16.9202371Z",
+    "status": "Skipped",
+    "code": "Accepted",
+    "resource": {
+        "workflowId": "817b0dff4fae4e7f873702450cadad2a",
+        "workflowName": "monitoredArrestLapp",
+        "runId": "08585661189485881870986871296CU00",
+        "triggerName": "When_there_are_messages_in_a_queue"
+    },
+    "correlation": {
+        "clientTrackingId": "08585661189485881870986871296CU00"
+    }
+}', triggerType='ApiConnection', flowScaleUnit='cu00', triggerKind='', sourceTriggerHistoryName='', failureCause='', overrideUsageConfigurationName='', activityId='e6f795f5-1a44-493d-b52e-2136d79785bf'.
+    2021-10-29T06: 12: 22Z   [Information
+]   Host Status: {
+    "id": "cfmonitoredarrestslapp",
+    "state": "Running",
+    "version": "3.3.1.0",
+    "versionDetails": "3.3.1 Commit hash: bd2b318013cee8d608c88203ec4ee3516d2a9961",
+    "platformVersion": "95.0.7.554",
+    "instanceId": "6434eb4bb5d8ded286308b187ea4105e787e1cd54bfe287fe116e71a375e9837",
+    "computerName": "pd1mdwk0001H6",
+    "processUptime": 619987,
+    "extensionBundle": {
+        "id": "Microsoft.Azure.Functions.ExtensionBundle.Workflows",
+        "version": "1.1.27"
+    }
+}
+    2021-10-29T06: 12: 22Z   [Information
+]   Host Status: {
+    "id": "cfmonitoredarrestslapp",
+    "state": "Running",
+    "version": "3.3.1.0",
+    "versionDetails": "3.3.1 Commit hash: bd2b318013cee8d608c88203ec4ee3516d2a9961",
+    "platformVersion": "95.0.7.554",
+    "instanceId": "6434eb4bb5d8ded286308b187ea4105e787e1cd54bfe287fe116e71a375e9837",
+    "computerName": "pd1mdwk0001H6",
+    "processUptime": 620249,
+    "extensionBundle": {
+        "id": "Microsoft.Azure.Functions.ExtensionBundle.Workflows",
+        "version": "1.1.27"
+    }
+}
+    2021-10-29T06: 12: 26Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 1140): History=(0,
+0,
+2,
+0,
+0), AvgCpuLoad=0, MaxCpuLoad=2
+    2021-10-29T06: 12: 26Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 12: 26Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 12: 26Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 6372): History=(0,
+0,
+0,
+0,
+0), AvgCpuLoad=0, MaxCpuLoad=0
+    2021-10-29T06: 12: 26Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 12: 26Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 12: 28Z   [Verbose
+]   Hosting stopping
+    2021-10-29T06: 12: 28Z   [Verbose
+]   Stopping file watchers.
+    2021-10-29T06: 12: 28Z   [Verbose
+]   Waiting for RpcFunctionInvocationDispatcher to shutdown
+    2021-10-29T06: 12: 28Z   [Verbose
+]   Draining invocations from language worker channel timed out. Shutting down 'RpcFunctionInvocationDispatcher'
+    2021-10-29T06: 12: 28Z   [Information
+]   Stopping JobHost
+    2021-10-29T06: 12: 28Z   [Information
+]   Job host stopped
+    2021-10-29T06: 12: 28Z   [Verbose
+]   Hosting stopped
+    2021-10-29T06: 12: 28Z   [Verbose
+]   Disposing ScriptHost.
+    2021-10-29T06: 12: 28Z   [Verbose
+]   Disposing FunctionDispatcher
+    2021-10-29T06: 12: 28Z   [Information
+]   Service stopping: serviceName='Microsoft-Azure-Workflows', version='1.0.0', name='', value='', message='Stopping the runtime with environment name 'Microsoft-Azure-Workflows', Number of cores: '2'. Memory: '108888064'.', correlationId='', organizationId='', activityVector='', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='00000000-0000-0000-0000-000000000000'.
+    2021-10-29T06: 12: 28Z   [Information
+]   Service stopped: serviceName='Microsoft-Azure-Workflows', version='1.0.0', name='', value='', message='Stopped the runtime with environment name 'Microsoft-Azure-Workflows'.', correlationId='', organizationId='', activityVector='', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='00000000-0000-0000-0000-000000000000'.
+    2021-10-29T06: 12: 28Z   [Information
+]   Service stopping: serviceName='Microsoft-Azure-Workflows', version='1.0.0', name='', value='', message='Stopping the runtime with environment name 'Microsoft-Azure-Workflows', Number of cores: '2'. Memory: '108904448'.', correlationId='', organizationId='', activityVector='', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='00000000-0000-0000-0000-000000000000'.
+    2021-10-29T06: 12: 28Z   [Information
+]   Service stopped: serviceName='Microsoft-Azure-Workflows', version='1.0.0', name='', value='', message='Stopped the runtime with environment name 'Microsoft-Azure-Workflows'.', correlationId='', organizationId='', activityVector='', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='00000000-0000-0000-0000-000000000000'.
+    2021-10-29T06: 12: 29Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 6764): History=(0,
+0,
+0,
+0,
+2), AvgCpuLoad=0, MaxCpuLoad=2
+    2021-10-29T06: 12: 29Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 12: 29Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 12: 39Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 1140): History=(0,
+0,
+0,
+0,
+0), AvgCpuLoad=0, MaxCpuLoad=0
+    2021-10-29T06: 12: 39Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 12: 39Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 12: 40Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 6372): History=(0,
+0,
+0,
+0,
+0), AvgCpuLoad=0, MaxCpuLoad=0
+    2021-10-29T06: 12: 40Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 12: 40Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 12: 42Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 6764): History=(0,
+0,
+0,
+0,
+0), AvgCpuLoad=0, MaxCpuLoad=0
+    2021-10-29T06: 12: 42Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 12: 42Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 12: 52Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 1140): History=(0,
+0,
+0,
+0,
+0), AvgCpuLoad=0, MaxCpuLoad=0
+    2021-10-29T06: 12: 52Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 12: 52Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 12: 52Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 6372): History=(0,
+0,
+0,
+0,
+0), AvgCpuLoad=0, MaxCpuLoad=0
+    2021-10-29T06: 12: 52Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 12: 52Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 12: 55Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 6764): History=(0,
+0,
+0,
+0,
+0), AvgCpuLoad=0, MaxCpuLoad=0
+    2021-10-29T06: 12: 55Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 12: 55Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 12: 59Z   [Information
+]   File change of type 'Changed' detected for 'C:\home\site\wwwroot\monitoredArrestLapp\workflow.json'
+    2021-10-29T06: 12: 59Z   [Information
+]   Host configuration has changed. Signaling restart
+    2021-10-29T06: 12: 59Z   [Information
+]   File change of type 'Changed' detected for 'C:\home\site\wwwroot\monitoredArrestLapp\workflow.json'
+    2021-10-29T06: 12: 59Z   [Information
+]   Host configuration has changed. Signaling restart
+    2021-10-29T06: 12: 59Z   [Information
+]   File change of type 'Changed' detected for 'C:\home\site\wwwroot\monitoredArrestLapp\workflow.json'
+    2021-10-29T06: 12: 59Z   [Information
+]   Host configuration has changed. Signaling restart
+    2021-10-29T06: 12: 59Z   [Information
+]   File change of type 'Changed' detected for 'C:\home\site\wwwroot\monitoredArrestLapp\workflow.json'
+    2021-10-29T06: 12: 59Z   [Information
+]   Host configuration has changed. Signaling restart
+    2021-10-29T06: 13: 00Z   [Information
+]   Loading functions metadata
+    2021-10-29T06: 13: 00Z   [Information
+]   0 functions loaded
+    2021-10-29T06: 13: 00Z   [Verbose
+]   Incoming HTTP request starts: correlationId='35a6e29c-cee8-4c50-ab6a-06661f18c68b', authorizationSource='', authorizationAction='', operationName='POST/API/MANAGEMENT/WORKFLOWS/VALIDATE', httpMethod='POST', hostName='cfmonitoredarrestslapp.azurewebsites.net', targetUri='https: //cfmonitoredarrestslapp.azurewebsites.net/runtime/webhooks/workflow/api/management/workflows/monitoredArrestLapp/validate?api-version=2018-11-01', userAgent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36 Edg/95.0.1020.30', clientRequestId='165ee354-de05-47c7-affc-ada2b78ab07a', clientSessionId='42503b43c6b2465188b82c46de062c42', clientIpAddress='96.244.41.63', clientApplicationId='', apiVersion='2018-11-01', contentLength='6645', serviceRequestId='', durationInMilliseconds='-1', httpStatusCode='-1', exceptionMessage='', errorCode='', failureCause='', errorMessage='', referer='https://management.azure.com:443/subscriptions/ab603228-3612-44fb-8847-c844cc805171/resourceGroups/cf-app-insights-la-poc/providers/Microsoft.Web/sites/cfMonitoredArrestsLapp/hostruntime/runtime/webhooks/workflow/api/management/workflows/monitoredArrestLapp/validate?api-version=2018-11-01', commandName='Microsoft_Azure_EMA.validateWorkflow', parameterSetName='', contentType='application/json', contentEncoding='', armServiceRequestId='', organizationId='', activityVector='IN.0J.IN', locale='en', additionalProperties='{"ParentActivityId":"00-5b9fa163daad214f8d4d5e9100ea543c-3f3cc704f0849b4b-01"}', targetResourceProvider='', targetResourceType='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='e34f54c9-95b9-404b-84c6-7630e3c2f397'.
+2021-10-29T06: 13: 00Z   [Verbose
+]   Storage operation completed: correlationId='35a6e29c-cee8-4c50-ab6a-06661f18c68b', operationName='StorageDataProvider.Find.Flow', accountName='storageaccountcfappb9ca', resourceType='table', resourceName='floweaffb5a68d273cfflows', clientRequestId='252a8d16-efb9-48fd-aa60-4ac2c50e8ffe', operationStatus='RanToCompletion', durationInMilliseconds='8', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 200,
+        "httpStatusMessage": "OK",
+        "etag": "W/\u0022datetime\u00272021-10-29T06%3A02%3A07.0325263Z\u0027\u0022",
+        "serviceRequestID": "989ea240-a002-0057-508c-cc45ab000000",
+        "startTime": "2021-10-29T06:12:59.8501458Z",
+        "endTime": "2021-10-29T06:12:59.8589529Z"
+    }
+]', organizationId='', activityVector='IN.0J.IN.01', ingressBytes='0', egressBytes='0', additionalProperties='{
+    "ParentActivityId": "00-5b9fa163daad214f8d4d5e9100ea543c-3f3cc704f0849b4b-01"
+}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='e34f54c9-95b9-404b-84c6-7630e3c2f397'.
+    2021-10-29T06: 13: 00Z   [Information
+]   Loading functions metadata
+    2021-10-29T06: 13: 00Z   [Verbose
+]   Incoming HTTP request succeeded: correlationId='35a6e29c-cee8-4c50-ab6a-06661f18c68b', authorizationSource='Management', authorizationAction='', operationName='POST/API/MANAGEMENT/WORKFLOWS/VALIDATE', httpMethod='POST', hostName='cfmonitoredarrestslapp.azurewebsites.net', targetUri='https: //cfmonitoredarrestslapp.azurewebsites.net/runtime/webhooks/workflow/api/management/workflows/monitoredArrestLapp/validate?api-version=2018-11-01', userAgent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36 Edg/95.0.1020.30', clientRequestId='165ee354-de05-47c7-affc-ada2b78ab07a', clientSessionId='42503b43c6b2465188b82c46de062c42', clientIpAddress='96.244.41.63', clientApplicationId='c44b4083-3bb0-49c1-b47d-974e53cbdf3c', apiVersion='2018-11-01', contentLength='-1', serviceRequestId=':e34f54c9-95b9-404b-84c6-7630e3c2f397', durationInMilliseconds='75', httpStatusCode='200', exceptionMessage='', errorCode='', failureCause='', errorMessage='', referer='https://management.azure.com:443/subscriptions/ab603228-3612-44fb-8847-c844cc805171/resourceGroups/cf-app-insights-la-poc/providers/Microsoft.Web/sites/cfMonitoredArrestsLapp/hostruntime/runtime/webhooks/workflow/api/management/workflows/monitoredArrestLapp/validate?api-version=2018-11-01', commandName='Microsoft_Azure_EMA.validateWorkflow', parameterSetName='', contentType='', contentEncoding='', armServiceRequestId='', organizationId='', activityVector='IN.0J.IN', locale='en', additionalProperties='{"ParentActivityId":"00-5b9fa163daad214f8d4d5e9100ea543c-3f3cc704f0849b4b-01"}', targetResourceProvider='', targetResourceType='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='e34f54c9-95b9-404b-84c6-7630e3c2f397'.
+2021-10-29T06: 13: 00Z   [Information
+]   0 functions loaded
+    2021-10-29T06: 13: 02Z   [Verbose
+]   Storage operation completed: correlationId='', operationName='BackgroundJobsDataProvider.UpdateJobDefinition', accountName='storageaccountcfappb9ca', resourceType='table', resourceName='floweaffb5a68d273cfjobdefinitions', clientRequestId='0c119ed3-9c42-4b8f-9725-25ba81649afc', operationStatus='RanToCompletion', durationInMilliseconds='5', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 204,
+        "httpStatusMessage": "No Content",
+        "etag": "W/\u0022datetime\u00272021-10-29T06%3A13%3A02.4326264Z\u0027\u0022",
+        "serviceRequestID": "989ea427-a002-0057-118c-cc45ab000000",
+        "startTime": "2021-10-29T06:13:02.4283742Z",
+        "endTime": "2021-10-29T06:13:02.4337177Z"
+    }
+]', organizationId='', activityVector='IN.00', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='936e3ad3-8a0d-4294-b87d-00d147fb95d1'.
+    2021-10-29T06: 13: 02Z   [Verbose
+]   Storage operation completed: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='StorageDataProvider.Find.Flow', accountName='storageaccountcfappb9ca', resourceType='table', resourceName='floweaffb5a68d273cfflows', clientRequestId='2550f138-a2bc-4212-9c54-291abfe7d7d9', operationStatus='RanToCompletion', durationInMilliseconds='3', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 200,
+        "httpStatusMessage": "OK",
+        "etag": "W/\u0022datetime\u00272021-10-29T06%3A13%3A02.3426784Z\u0027\u0022",
+        "serviceRequestID": "989ea42b-a002-0057-158c-cc45ab000000",
+        "startTime": "2021-10-29T06:13:02.4342306Z",
+        "endTime": "2021-10-29T06:13:02.4379281Z"
+    }
+]', organizationId='', activityVector='IN.0S', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='936e3ad3-8a0d-4294-b87d-00d147fb95d1'.
+    2021-10-29T06: 13: 02Z   [Verbose
+]   Storage operation completed: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='StorageDataProvider.Find.Flow', accountName='storageaccountcfappb9ca', resourceType='table', resourceName='floweaffb5a68d273cfflows', clientRequestId='3823bd42-c554-4b19-8f50-7a4304704574', operationStatus='RanToCompletion', durationInMilliseconds='4', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 200,
+        "httpStatusMessage": "OK",
+        "etag": "W/\u0022datetime\u00272021-10-29T06%3A13%3A02.3365089Z\u0027\u0022",
+        "serviceRequestID": "989ea42d-a002-0057-178c-cc45ab000000",
+        "startTime": "2021-10-29T06:13:02.4383402Z",
+        "endTime": "2021-10-29T06:13:02.4433014Z"
+    }
+]', organizationId='', activityVector='IN.0U', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='936e3ad3-8a0d-4294-b87d-00d147fb95d1'.
+    2021-10-29T06: 13: 03Z   [Verbose
+]   Hosting stopping
+    2021-10-29T06: 13: 03Z   [Verbose
+]   Stopping file watchers.
+    2021-10-29T06: 13: 04Z   [Verbose
+]   Waiting for RpcFunctionInvocationDispatcher to shutdown
+    2021-10-29T06: 13: 04Z   [Verbose
+]   Draining invocations from language worker channel timed out. Shutting down 'RpcFunctionInvocationDispatcher'
+    2021-10-29T06: 13: 04Z   [Information
+]   Stopping JobHost
+    2021-10-29T06: 13: 04Z   [Information
+]   Job host stopped
+    2021-10-29T06: 13: 04Z   [Verbose
+]   Hosting stopped
+    2021-10-29T06: 13: 04Z   [Verbose
+]   Disposing ScriptHost.
+    2021-10-29T06: 13: 04Z   [Verbose
+]   Disposing FunctionDispatcher
+    2021-10-29T06: 13: 04Z   [Information
+]   Service stopping: serviceName='Microsoft-Azure-Workflows', version='1.0.0', name='', value='', message='Stopping the runtime with environment name 'Microsoft-Azure-Workflows', Number of cores: '2'. Memory: '156217344'.', correlationId='', organizationId='', activityVector='', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='00000000-0000-0000-0000-000000000000'.
+    2021-10-29T06: 13: 08Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 6764): History=(0,
+0,
+0,
+0,
+0), AvgCpuLoad=0, MaxCpuLoad=0
+    2021-10-29T06: 13: 08Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 13: 08Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 13: 17Z   [Verbose
+]   Storage operation completed: correlationId='', operationName='BackgroundJobsDataProvider.UpdateJobDefinition', accountName='storageaccountcfappb9ca', resourceType='table', resourceName='floweaffb5a68d273cfjobdefinitions', clientRequestId='b27d73c4-c485-4699-935b-55a8dcf311f9', operationStatus='RanToCompletion', durationInMilliseconds='4', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 204,
+        "httpStatusMessage": "No Content",
+        "etag": "W/\u0022datetime\u00272021-10-29T06%3A13%3A16.7743559Z\u0027\u0022",
+        "serviceRequestID": "dbbaf2cc-b002-008f-038c-cce27a000000",
+        "startTime": "2021-10-29T06:13:16.7710062Z",
+        "endTime": "2021-10-29T06:13:16.7756851Z"
+    }
+]', organizationId='', activityVector='IN.00', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='f5e6551e-d848-417b-99e4-e3b79bde4cdb'.
+    2021-10-29T06: 13: 17Z   [Verbose
+]   Storage operation completed: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='StorageDataProvider.Find.FlowRuntimeContext', accountName='storageaccountcfappb9ca', resourceType='table', resourceName='floweaffb5a68d273cfflowruntimecontext', clientRequestId='b954d046-c855-4281-94dc-8b7229f5f62d', operationStatus='RanToCompletion', durationInMilliseconds='5', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 200,
+        "httpStatusMessage": "OK",
+        "etag": "W/\u0022datetime\u00272021-10-29T06%3A13%3A02.5485597Z\u0027\u0022",
+        "serviceRequestID": "dbbaf313-b002-008f-278c-cce27a000000",
+        "startTime": "2021-10-29T06:13:16.8847985Z",
+        "endTime": "2021-10-29T06:13:16.8901276Z"
+    }
+]', organizationId='', activityVector='IN.1L', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='f5e6551e-d848-417b-99e4-e3b79bde4cdb'.
+    2021-10-29T06: 13: 17Z   [Information
+]   Workflow trigger starts. flowName='monitoredArrestLapp', triggerName='When_there_are_messages_in_a_queue', flowId='817b0dff4fae4e7f873702450cadad2a', flowSequenceId='08585661189034694682', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', status='', statusCode='', error='', durationInMilliseconds='-1', flowRunSequenceId='', inputsContentSize='-1', outputsContentSize='-1', clientTrackingId='', properties='{
+    "$schema": "2016-06-01",
+    "startTime": "2021-10-29T06:13:16.898349Z",
+    "status": "Running",
+    "resource": {
+        "workflowId": "817b0dff4fae4e7f873702450cadad2a",
+        "workflowName": "monitoredArrestLapp",
+        "runId": "08585661188885799238276459521CU00",
+        "triggerName": "When_there_are_messages_in_a_queue"
+    },
+    "correlation": {}
+}', triggerType='ApiConnection', flowScaleUnit='cu00', triggerKind='', sourceTriggerHistoryName='', failureCause='', activityId='f5e6551e-d848-417b-99e4-e3b79bde4cdb'.
+    2021-10-29T06: 13: 18Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 1140): History=(0,
+0,
+1,
+0,
+0), AvgCpuLoad=0, MaxCpuLoad=1
+    2021-10-29T06: 13: 18Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 13: 18Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 13: 18Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 6372): History=(0,
+0,
+1,
+20,
+4), AvgCpuLoad=5, MaxCpuLoad=20
+    2021-10-29T06: 13: 21Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 6764): History=(0,
+0,
+0,
+0,
+0), AvgCpuLoad=0, MaxCpuLoad=0
+    2021-10-29T06: 13: 21Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 13: 21Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 13: 22Z   [Information
+]   Host Status: {
+    "id": "cfmonitoredarrestslapp",
+    "state": "Running",
+    "version": "3.3.1.0",
+    "versionDetails": "3.3.1 Commit hash: bd2b318013cee8d608c88203ec4ee3516d2a9961",
+    "platformVersion": "95.0.7.554",
+    "instanceId": "6434eb4bb5d8ded286308b187ea4105e787e1cd54bfe287fe116e71a375e9837",
+    "computerName": "pd1mdwk0001H6",
+    "processUptime": 680018,
+    "extensionBundle": {
+        "id": "Microsoft.Azure.Functions.ExtensionBundle.Workflows",
+        "version": "1.1.27"
+    }
+}
+    2021-10-29T06: 13: 23Z   [Information
+]   Host Status: {
+    "id": "cfmonitoredarrestslapp",
+    "state": "Running",
+    "version": "3.3.1.0",
+    "versionDetails": "3.3.1 Commit hash: bd2b318013cee8d608c88203ec4ee3516d2a9961",
+    "platformVersion": "95.0.7.554",
+    "instanceId": "6434eb4bb5d8ded286308b187ea4105e787e1cd54bfe287fe116e71a375e9837",
+    "computerName": "pd1mdwk0001H6",
+    "processUptime": 680625,
+    "extensionBundle": {
+        "id": "Microsoft.Azure.Functions.ExtensionBundle.Workflows",
+        "version": "1.1.27"
+    }
+}
+    2021-10-29T06: 13: 31Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 1140): History=(0,
+0,
+0,
+0,
+0), AvgCpuLoad=0, MaxCpuLoad=0
+    2021-10-29T06: 13: 31Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 13: 31Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 13: 31Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 5588): History=(0,
+0,
+0,
+0,
+2), AvgCpuLoad=0, MaxCpuLoad=2
+    2021-10-29T06: 13: 31Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 13: 31Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 13: 31Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 6372): History=(0,
+0,
+0,
+0,
+0), AvgCpuLoad=0, MaxCpuLoad=0
+    2021-10-29T06: 13: 31Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 13: 31Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 13: 33Z   [Verbose
+]   Initiating background SyncTriggers operation
+    2021-10-29T06: 13: 34Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 6764): History=(0,
+0,
+0,
+0,
+0), AvgCpuLoad=0, MaxCpuLoad=0
+    2021-10-29T06: 13: 34Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 13: 34Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 13: 44Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 1140): History=(0,
+0,
+0,
+0,
+0), AvgCpuLoad=0, MaxCpuLoad=0
+    2021-10-29T06: 13: 44Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 13: 44Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 13: 44Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 5588): History=(0,
+0,
+0,
+0,
+0), AvgCpuLoad=0, MaxCpuLoad=0
+    2021-10-29T06: 13: 44Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 13: 44Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 13: 44Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 6372): History=(0,
+0,
+0,
+0,
+0), AvgCpuLoad=0, MaxCpuLoad=0
+    2021-10-29T06: 13: 44Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 13: 44Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 13: 47Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 6764): History=(0,
+0,
+0,
+0,
+0), AvgCpuLoad=0, MaxCpuLoad=0
+    2021-10-29T06: 13: 47Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 13: 47Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 13: 58Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 1140): History=(0,
+0,
+0,
+0,
+0), AvgCpuLoad=0, MaxCpuLoad=0
+    2021-10-29T06: 13: 58Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 13: 58Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 13: 58Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 5588): History=(0,
+0,
+0,
+0,
+0), AvgCpuLoad=0, MaxCpuLoad=0
+    2021-10-29T06: 13: 58Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 13: 58Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 13: 58Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 6372): History=(0,
+0,
+0,
+0,
+0), AvgCpuLoad=0, MaxCpuLoad=0
+    2021-10-29T06: 13: 58Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 13: 58Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 14: 00Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 6764): History=(0,
+0,
+0,
+0,
+0), AvgCpuLoad=0, MaxCpuLoad=0
+    2021-10-29T06: 14: 00Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 14: 00Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 14: 11Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 1140): History=(0,
+0,
+0,
+0,
+0), AvgCpuLoad=0, MaxCpuLoad=0
+    2021-10-29T06: 14: 11Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 14: 11Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 14: 11Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 5588): History=(0,
+0,
+0,
+0,
+0), AvgCpuLoad=0, MaxCpuLoad=0
+    2021-10-29T06: 14: 11Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 14: 11Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 14: 11Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 6372): History=(0,
+0,
+0,
+0,
+0), AvgCpuLoad=0, MaxCpuLoad=0
+    2021-10-29T06: 14: 11Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 14: 11Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 14: 13Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 6764): History=(0,
+0,
+0,
+0,
+0), AvgCpuLoad=0, MaxCpuLoad=0
+    2021-10-29T06: 14: 13Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 14: 13Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 14: 17Z   [Verbose
+]   Storage operation completed: correlationId='', operationName='BackgroundJobsDataProvider.UpdateJobDefinition', accountName='storageaccountcfappb9ca', resourceType='table', resourceName='floweaffb5a68d273cfjobdefinitions', clientRequestId='b5813b0c-ffc0-4ae0-94e2-0dfdf77a4835', operationStatus='RanToCompletion', durationInMilliseconds='6', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 204,
+        "httpStatusMessage": "No Content",
+        "etag": "W/\u0022datetime\u00272021-10-29T06%3A14%3A17.3734293Z\u0027\u0022",
+        "serviceRequestID": "317c72c0-2002-004d-628c-cc6ac4000000",
+        "startTime": "2021-10-29T06:14:17.3648702Z",
+        "endTime": "2021-10-29T06:14:17.3754066Z"
+    }
+]', organizationId='', activityVector='IN.00', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='c6773b12-7cdc-454b-8c4b-edb24cfe6a4f'.
+    2021-10-29T06: 14: 18Z   [Verbose
+]   Storage operation completed: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='StorageDataProvider.Find.FlowRuntimeContext', accountName='storageaccountcfappb9ca', resourceType='table', resourceName='floweaffb5a68d273cfflowruntimecontext', clientRequestId='a65b6db3-1e2b-439b-b6c7-c1acf6dfa4ab', operationStatus='RanToCompletion', durationInMilliseconds='5', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 200,
+        "httpStatusMessage": "OK",
+        "etag": "W/\u0022datetime\u00272021-10-29T06%3A13%3A02.5485597Z\u0027\u0022",
+        "serviceRequestID": "317c72ed-2002-004d-0c8c-cc6ac4000000",
+        "startTime": "2021-10-29T06:14:17.5836753Z",
+        "endTime": "2021-10-29T06:14:17.5898251Z"
+    }
+]', organizationId='', activityVector='IN.1L', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='c6773b12-7cdc-454b-8c4b-edb24cfe6a4f'.
+    2021-10-29T06: 14: 18Z   [Information
+]   Workflow trigger starts. flowName='monitoredArrestLapp', triggerName='When_there_are_messages_in_a_queue', flowId='817b0dff4fae4e7f873702450cadad2a', flowSequenceId='08585661189034694682', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', status='', statusCode='', error='', durationInMilliseconds='-1', flowRunSequenceId='', inputsContentSize='-1', outputsContentSize='-1', clientTrackingId='', properties='{
+    "$schema": "2016-06-01",
+    "startTime": "2021-10-29T06:14:17.6021101Z",
+    "status": "Running",
+    "resource": {
+        "workflowId": "817b0dff4fae4e7f873702450cadad2a",
+        "workflowName": "monitoredArrestLapp",
+        "runId": "08585661188278762795833592606CU00",
+        "triggerName": "When_there_are_messages_in_a_queue"
+    },
+    "correlation": {}
+}', triggerType='ApiConnection', flowScaleUnit='cu00', triggerKind='', sourceTriggerHistoryName='', failureCause='', activityId='c6773b12-7cdc-454b-8c4b-edb24cfe6a4f'.
+    2021-10-29T06: 14: 18Z   [Verbose
+]   Job debug message: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='FlowRetryableJobCallback.GetApiHubHttpAuthentication', jobPartition='817B0DFF4FAE4E7F873702450CADAD2A', jobId='FlowTriggerJob-WHEN: 5FTHERE: 5FARE: 5FMESSAGES: 5FIN: 5FA: 5FQUEUE', message='Calling apiHub APIM endpoint using connection key-based authentication provided in connection reference to target uri 'https: //8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/azurequeues/f93a9bac22154b389a0d00acc30a03c2/v2/storageAccounts/sandboxclearforceapi/queues/arrests/message_trigger'.', exception='<null>', organizationId='', activityVector='IN.1K', additionalProperties='{"ParentActivityId":"00-80b07fde8e85f243bade058a1fed9576-9fa02cb714431a41-00"}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='c6773b12-7cdc-454b-8c4b-edb24cfe6a4f'.
+2021-10-29T06: 14: 18Z   [Verbose
+]   Debug message: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='EdgeOAuthTokenProvider.GetToken', message='Retrive token from local managed identity store for workflow app system assigned managed identity with authenticationUri: http: //127.0.0.1:41554/MSI/token/ resource: https://management.core.windows.net/', exception='<null>', organizationId='', activityVector='IN.1K', additionalProperties='{"ParentActivityId":"00-80b07fde8e85f243bade058a1fed9576-9fa02cb714431a41-00"}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='c6773b12-7cdc-454b-8c4b-edb24cfe6a4f'.
+2021-10-29T06: 14: 18Z   [Verbose
+]   Outgoing HTTP request starts: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='GET/MSI/', httpMethod='GET', hostName='127.0.0.1', targetUri='http: //127.0.0.1:41554/MSI/token/?resource=https%3a%2f%2fmanagement.core.windows.net%2f&api-version=2019-08-01', clientRequestId='876354fb617a48b798aa0b929030c958', clientSessionId='', clientApplicationId='', apiVersion='2019-08-01', contentLength='-1', serviceRequestId='', durationInMilliseconds='-1', httpStatusCode='-1', exceptionMessage='', errorCode='', errorMessage='', referer='<null>', failureCause='', contentType='', contentEncoding='', armServiceRequestId='', organizationId='', activityVector='IN.1L', locale='', additionalProperties='{"ParentActivityId":"00-80b07fde8e85f243bade058a1fed9576-9fa02cb714431a41-00"}', targetResourceProvider='', targetResourceType='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='c6773b12-7cdc-454b-8c4b-edb24cfe6a4f'.
+2021-10-29T06: 14: 18Z   [Verbose
+]   Outgoing HTTP request succeeded: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='GET/MSI/', httpMethod='GET', hostName='127.0.0.1', targetUri='http: //127.0.0.1:41554/MSI/token/?resource=https%3a%2f%2fmanagement.core.windows.net%2f&api-version=2019-08-01', clientRequestId='876354fb617a48b798aa0b929030c958', clientSessionId='', clientApplicationId='', apiVersion='2019-08-01', contentLength='1656', serviceRequestId='', durationInMilliseconds='612', httpStatusCode='200', exceptionMessage='', errorCode='', errorMessage='', referer='<null>', failureCause='', contentType='', contentEncoding='', armServiceRequestId='', organizationId='', activityVector='IN.1L', locale='', additionalProperties='{"ParentActivityId":"00-80b07fde8e85f243bade058a1fed9576-9fa02cb714431a41-00"}', targetResourceProvider='', targetResourceType='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='c6773b12-7cdc-454b-8c4b-edb24cfe6a4f'.
+2021-10-29T06: 14: 18Z   [Verbose
+]   Debug message: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='EdgeOAuthTokenProvider.GetManagedIdentityToken', message='Successfully retrived managed identity oauth token for authenticationUri: http: //127.0.0.1:41554/MSI/token/ resource: https://management.core.windows.net/ tokenType Bearer', exception='<null>', organizationId='', activityVector='IN.1M', additionalProperties='{"ParentActivityId":"00-80b07fde8e85f243bade058a1fed9576-9fa02cb714431a41-00"}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='c6773b12-7cdc-454b-8c4b-edb24cfe6a4f'.
+2021-10-29T06: 14: 18Z   [Verbose
+]   Debug message: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='HttpRequestMessageExtensions.AddOAuthHeader', message='Sending request to 'https: //8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/' using OAuth with tenantId 'WorkflowAppSystemAssignedManagedIdentityTenant', clientId 'WorkflowAppSystemAssignedManagedIdentityClient' and audience 'https://management.core.windows.net/'.', exception='<null>', organizationId='', activityVector='IN.1M', additionalProperties='{"ParentActivityId":"00-80b07fde8e85f243bade058a1fed9576-9fa02cb714431a41-00"}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='c6773b12-7cdc-454b-8c4b-edb24cfe6a4f'.
+2021-10-29T06: 14: 18Z   [Verbose
+]   Outgoing HTTP request starts: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='CallApiHubEndpoint.Trigger.CustomApi/azurequeues', httpMethod='GET', hostName='8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net', targetUri='https: //8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/azurequeues/f93a9bac22154b389a0d00acc30a03c2/v2/storageAccounts/sandboxclearforceapi/queues/arrests/message_trigger', clientRequestId='c6773b12-7cdc-454b-8c4b-edb24cfe6a4f', clientSessionId='', clientApplicationId='', apiVersion='', contentLength='-1', serviceRequestId='', durationInMilliseconds='-1', httpStatusCode='-1', exceptionMessage='', errorCode='', errorMessage='', referer='<null>', failureCause='', contentType='', contentEncoding='', armServiceRequestId='', organizationId='', activityVector='IN.1N', locale='en-US', additionalProperties='{"ParentActivityId":"00-80b07fde8e85f243bade058a1fed9576-9fa02cb714431a41-00"}', targetResourceProvider='', targetResourceType='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='c6773b12-7cdc-454b-8c4b-edb24cfe6a4f'.
+2021-10-29T06: 14: 19Z   [Verbose
+]   Outgoing HTTP request succeeded: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='CallApiHubEndpoint.Trigger.CustomApi/azurequeues', httpMethod='GET', hostName='8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net', targetUri='https: //8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/azurequeues/f93a9bac22154b389a0d00acc30a03c2/v2/storageAccounts/sandboxclearforceapi/queues/arrests/message_trigger', clientRequestId='c6773b12-7cdc-454b-8c4b-edb24cfe6a4f', clientSessionId='', clientApplicationId='', apiVersion='', contentLength='0', serviceRequestId='80f8d9a7-6003-0068-328c-ccd553000000', durationInMilliseconds='152', httpStatusCode='202', exceptionMessage='', errorCode='', errorMessage='', referer='<null>', failureCause='', contentType='', contentEncoding='', armServiceRequestId='', organizationId='', activityVector='IN.1N', locale='en-US', additionalProperties='{"ParentActivityId":"00-80b07fde8e85f243bade058a1fed9576-9fa02cb714431a41-00"}', targetResourceProvider='', targetResourceType='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='c6773b12-7cdc-454b-8c4b-edb24cfe6a4f'.
+2021-10-29T06: 14: 19Z   [Verbose
+]   Job debug message: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='FlowRetryableTriggerJobCallback.HandleResponseMessage', jobPartition='817B0DFF4FAE4E7F873702450CADAD2A', jobId='FlowTriggerJob-WHEN: 5FTHERE: 5FARE: 5FMESSAGES: 5FIN: 5FA: 5FQUEUE', message='Received response with continuation. Original request uri: 'https: //8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/azurequeues/f93a9bac22154b389a0d00acc30a03c2/v2/storageAccounts/sandboxclearforceapi/queues/arrests/message_trigger'. Location header: 'https://8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/azurequeues/f93a9bac22154b389a0d00acc30a03c2/v2/storageAccounts/sandboxclearforceapi/queues/arrests/message_trigger'. Retry-after header: '60'.', exception='<null>', organizationId='', activityVector='IN.1O', additionalProperties='{"ParentActivityId":"00-80b07fde8e85f243bade058a1fed9576-9fa02cb714431a41-00"}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='c6773b12-7cdc-454b-8c4b-edb24cfe6a4f'.
+2021-10-29T06: 14: 19Z   [Verbose
+]   Job debug message: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='FlowRecurrentTriggerJobCallback.UploadTriggerResultAndStartRun', jobPartition='817B0DFF4FAE4E7F873702450CADAD2A', jobId='FlowTriggerJob-WHEN: 5FTHERE: 5FARE: 5FMESSAGES: 5FIN: 5FA: 5FQUEUE', message='Completed execution of trigger callback. Status: 'Skipped'. Code: 'Accepted'. JobExecutionStatus: 'Succeeded'. Job version '2'.', exception='<null>', organizationId='', activityVector='IN.1O', additionalProperties='{
+    "ParentActivityId": "00-80b07fde8e85f243bade058a1fed9576-9fa02cb714431a41-00"
+}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='c6773b12-7cdc-454b-8c4b-edb24cfe6a4f'.
+    2021-10-29T06: 14: 19Z   [Verbose
+]   Job debug message: correlationId='', operationName='JobCallback.ExecuteAsync', jobPartition='817B0DFF4FAE4E7F873702450CADAD2A', jobId='FlowTriggerJob-WHEN: 5FTHERE: 5FARE: 5FMESSAGES: 5FIN: 5FA: 5FQUEUE', message='Background job operation 'ApiConnectionTriggerJob' completed with status 'Succeeded', message 'Accepted' and details '<null>' '1171' milliseconds from start.', exception='<null>', organizationId='', activityVector='', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='c6773b12-7cdc-454b-8c4b-edb24cfe6a4f'.
+    2021-10-29T06: 14: 19Z   [Verbose
+]   Storage operation completed: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='StorageArtifactsHelper.CreateTableIfNotExist', accountName='storageaccountcfappb9ca', resourceType='table', resourceName='floweaffb5a68d273cf1452a520ba20957histories', clientRequestId='970196af-08a2-43ef-a65e-c1550715b7ab', operationStatus='RanToCompletion', durationInMilliseconds='0', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 409,
+        "httpStatusMessage": "Conflict",
+        "serviceRequestID": "317c7431-2002-004d-368c-cc6ac4000000",
+        "startTime": "2021-10-29T06:14:18.7267148Z",
+        "endTime": "2021-10-29T06:14:18.7330799Z"
+    }
+]', organizationId='', activityVector='IN.1L', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='c6773b12-7cdc-454b-8c4b-edb24cfe6a4f'.
+    2021-10-29T06: 14: 19Z   [Verbose
+]   Storage operation completed: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='StorageDataProvider.Save.FlowTriggerHistory', accountName='storageaccountcfappb9ca', resourceType='table', resourceName='floweaffb5a68d273cf1452a520ba20957histories', clientRequestId='74cc8c05-e80a-44f9-84e8-37d8098363ea', operationStatus='RanToCompletion', durationInMilliseconds='6', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 204,
+        "httpStatusMessage": "No Content",
+        "etag": "W/\u0022datetime\u00272021-10-29T06%3A14%3A18.7496364Z\u0027\u0022",
+        "serviceRequestID": "317c7439-2002-004d-3d8c-cc6ac4000000",
+        "startTime": "2021-10-29T06:14:18.7441788Z",
+        "endTime": "2021-10-29T06:14:18.7508856Z"
+    }
+]', organizationId='', activityVector='IN.1N', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='c6773b12-7cdc-454b-8c4b-edb24cfe6a4f'.
+    2021-10-29T06: 14: 19Z   [Information
+]   Workflow trigger ends. flowName='monitoredArrestLapp', triggerName='When_there_are_messages_in_a_queue', flowId='817b0dff4fae4e7f873702450cadad2a', flowSequenceId='08585661189034694682', status='Skipped', statusCode='Accepted', error='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', durationInMilliseconds='1083', flowRunSequenceId='', inputsContentSize='153', outputsContentSize='549', clientTrackingId='08585661188278762795833592606CU00', properties='{
+    "$schema": "2016-06-01",
+    "startTime": "2021-10-29T06:14:17.6021101Z",
+    "endTime": "2021-10-29T06:14:18.7550052Z",
+    "status": "Skipped",
+    "code": "Accepted",
+    "resource": {
+        "workflowId": "817b0dff4fae4e7f873702450cadad2a",
+        "workflowName": "monitoredArrestLapp",
+        "runId": "08585661188278762795833592606CU00",
+        "triggerName": "When_there_are_messages_in_a_queue"
+    },
+    "correlation": {
+        "clientTrackingId": "08585661188278762795833592606CU00"
+    }
+}', triggerType='ApiConnection', flowScaleUnit='cu00', triggerKind='', sourceTriggerHistoryName='', failureCause='', overrideUsageConfigurationName='', activityId='c6773b12-7cdc-454b-8c4b-edb24cfe6a4f'.
+    2021-10-29T06: 14: 19Z   [Verbose
+]   Job history: jobPartition='817B0DFF4FAE4E7F873702450CADAD2A', jobId='FlowTriggerJob-WHEN: 5FTHERE: 5FARE: 5FMESSAGES: 5FIN: 5FA: 5FQUEUE', callback='ApiConnectionTriggerJob', startTime='Fri,
+29 Oct 2021 06: 14: 17 GMT', endTime='Fri,
+29 Oct 2021 06: 14: 18 GMT', executionTimeInMilliseconds='1379.5751', executionDelayInMilliseconds='256.0172', executionIntervalInMilliseconds='60604.2741', executionStatus='Succeeded', executionMessage='Accepted', executionDetails='', nextExecutionTime='Fri,
+29 Oct 2021 06: 15: 18 GMT', correlationId='', dequeueCount='2', advanceVersion='False', triggerId='f64f5cdb-a520-41c4-a2d3-84b79af8a4f3', messageId='f80ef53a-68af-4238-9312-3637b9d428a2', state='Enabled', organizationId='', activityVector='', additionalProperties='', jobDurabilityLevel='Strong', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='c6773b12-7cdc-454b-8c4b-edb24cfe6a4f'.
+    2021-10-29T06: 14: 19Z   [Verbose
+]   Storage operation completed: correlationId='', operationName='BackgroundJobsDataProvider.UpdateJobDefinition', accountName='storageaccountcfappb9ca', resourceType='table', resourceName='floweaffb5a68d273cfjobdefinitions', clientRequestId='aee2f172-4650-4cc5-b785-c44166c0f2cb', operationStatus='RanToCompletion', durationInMilliseconds='10', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 204,
+        "httpStatusMessage": "No Content",
+        "etag": "W/\u0022datetime\u00272021-10-29T06%3A14%3A18.7986084Z\u0027\u0022",
+        "serviceRequestID": "317c7443-2002-004d-468c-cc6ac4000000",
+        "startTime": "2021-10-29T06:14:18.7928676Z",
+        "endTime": "2021-10-29T06:14:18.8035725Z"
+    }
+]', organizationId='', activityVector='IN.00', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='c6773b12-7cdc-454b-8c4b-edb24cfe6a4f'.
+    2021-10-29T06: 14: 19Z   [Verbose
+]   Storage operation completed: correlationId='', operationName='BackgroundJobsDataProvider.UpdateJobTriggerVisibilityDelay', accountName='storageaccountcfappb9ca', resourceType='queue', resourceName='floweaffb5a68d273cfjobtriggers00', clientRequestId='5e1245ce-34b7-4366-a9a5-28bba4767717', operationStatus='RanToCompletion', durationInMilliseconds='4', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 204,
+        "httpStatusMessage": "No Content",
+        "serviceRequestID": "21d34063-7003-001a-548c-cc8349000000",
+        "startTime": "2021-10-29T06:14:18.8242945Z",
+        "endTime": "2021-10-29T06:14:18.8287776Z"
+    }
+]', organizationId='', activityVector='IN.00', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='c6773b12-7cdc-454b-8c4b-edb24cfe6a4f'.
+    2021-10-29T06: 14: 22Z   [Information
+]   Host Status: {
+    "id": "cfmonitoredarrestslapp",
+    "state": "Running",
+    "version": "3.3.1.0",
+    "versionDetails": "3.3.1 Commit hash: bd2b318013cee8d608c88203ec4ee3516d2a9961",
+    "platformVersion": "95.0.7.554",
+    "instanceId": "6434eb4bb5d8ded286308b187ea4105e787e1cd54bfe287fe116e71a375e9837",
+    "computerName": "pd1mdwk0001H6",
+    "processUptime": 740093,
+    "extensionBundle": {
+        "id": "Microsoft.Azure.Functions.ExtensionBundle.Workflows",
+        "version": "1.1.27"
+    }
+}
+    2021-10-29T06: 14: 22Z   [Information
+]   Host Status: {
+    "id": "cfmonitoredarrestslapp",
+    "state": "Running",
+    "version": "3.3.1.0",
+    "versionDetails": "3.3.1 Commit hash: bd2b318013cee8d608c88203ec4ee3516d2a9961",
+    "platformVersion": "95.0.7.554",
+    "instanceId": "6434eb4bb5d8ded286308b187ea4105e787e1cd54bfe287fe116e71a375e9837",
+    "computerName": "pd1mdwk0001H6",
+    "processUptime": 740095,
+    "extensionBundle": {
+        "id": "Microsoft.Azure.Functions.ExtensionBundle.Workflows",
+        "version": "1.1.27"
+    }
+}
+    2021-10-29T06: 14: 24Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 5588): History=(7,
+1,
+0,
+0,
+0), AvgCpuLoad=2, MaxCpuLoad=7
+    2021-10-29T06: 14: 24Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 2
+    2021-10-29T06: 14: 24Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 14: 24Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 6372): History=(0,
+0,
+0,
+1,
+0), AvgCpuLoad=0, MaxCpuLoad=1
+    2021-10-29T06: 14: 24Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 14: 24Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 14: 26Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 6764): History=(0,
+0,
+0,
+0,
+0), AvgCpuLoad=0, MaxCpuLoad=0
+    2021-10-29T06: 14: 26Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 14: 26Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 14: 33Z   [Verbose
+]   Storage operation completed: correlationId='', operationName='BackgroundJobsDataProvider.UpdateJobDefinition', accountName='storageaccountcfappb9ca', resourceType='table', resourceName='floweaffb5a68d273cfjobdefinitions', clientRequestId='96e14fb8-71b2-4fd0-bfb9-c734771b6370', operationStatus='RanToCompletion', durationInMilliseconds='5', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 204,
+        "httpStatusMessage": "No Content",
+        "etag": "W/\u0022datetime\u00272021-10-29T06%3A14%3A32.5346951Z\u0027\u0022",
+        "serviceRequestID": "317c7ef3-2002-004d-7e8c-cc6ac4000000",
+        "startTime": "2021-10-29T06:14:32.5300667Z",
+        "endTime": "2021-10-29T06:14:32.5361126Z"
+    }
+]', organizationId='', activityVector='IN.00', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='896c0b3f-0cf3-47c9-8c4c-9e861562ddb8'.
+    2021-10-29T06: 14: 33Z   [Verbose
+]   Storage operation completed: correlationId='', operationName='BackgroundJobsDataProvider.GetJobDefinitionsByPartition', accountName='storageaccountcfappb9ca', resourceType='table', resourceName='floweaffb5a68d273cfjobdefinitions', clientRequestId='7d172343-01ff-4845-ac5a-abe774577ac0', operationStatus='RanToCompletion', durationInMilliseconds='10', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 200,
+        "httpStatusMessage": "OK",
+        "serviceRequestID": "317c7ef5-2002-004d-808c-cc6ac4000000",
+        "startTime": "2021-10-29T06:14:32.5517238Z",
+        "endTime": "2021-10-29T06:14:32.5613809Z"
+    }
+]', organizationId='', activityVector='IN.00', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='896c0b3f-0cf3-47c9-8c4c-9e861562ddb8'.
+    2021-10-29T06: 14: 33Z   [Verbose
+]   Job history: jobPartition='SYSTEMJOBS-CU00', jobId='DIAGNOSTICJOB-40000', callback='SystemDiagnosticJob', startTime='Fri,
+29 Oct 2021 06: 14: 32 GMT', endTime='Fri,
+29 Oct 2021 06: 14: 32 GMT', executionTimeInMilliseconds='32.1324', executionDelayInMilliseconds='536.666', executionIntervalInMilliseconds='0', executionStatus='Succeeded', executionMessage='Completed system diagnostic job for partition '40000'.', executionDetails='', nextExecutionTime='Fri,
+29 Oct 2021 07: 14: 32 GMT', correlationId='', dequeueCount='1', advanceVersion='False', triggerId='d1c221a0-da8a-4cd7-bc06-12b1c09a4c66', messageId='7e31cb32-9d1a-4c0c-96ae-604a2b91326a', state='Enabled', organizationId='', activityVector='', additionalProperties='', jobDurabilityLevel='Strong', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='896c0b3f-0cf3-47c9-8c4c-9e861562ddb8'.
+    2021-10-29T06: 14: 33Z   [Verbose
+]   Storage operation completed: correlationId='', operationName='BackgroundJobsDataProvider.UpdateJobDefinition', accountName='storageaccountcfappb9ca', resourceType='table', resourceName='floweaffb5a68d273cfjobdefinitions', clientRequestId='613c5e49-23b0-4b85-b191-8dd22f7d1448', operationStatus='RanToCompletion', durationInMilliseconds='5', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 204,
+        "httpStatusMessage": "No Content",
+        "etag": "W/\u0022datetime\u00272021-10-29T06%3A14%3A32.57867Z\u0027\u0022",
+        "serviceRequestID": "317c7ef9-2002-004d-038c-cc6ac4000000",
+        "startTime": "2021-10-29T06:14:32.5736517Z",
+        "endTime": "2021-10-29T06:14:32.5793661Z"
+    }
+]', organizationId='', activityVector='IN.00', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='896c0b3f-0cf3-47c9-8c4c-9e861562ddb8'.
+    2021-10-29T06: 14: 33Z   [Verbose
+]   Storage operation completed: correlationId='', operationName='BackgroundJobsDataProvider.UpdateJobDefinition', accountName='sandboxclearforceapi', resourceType='table', resourceName='flow5968aa2e70bd6dbjobdefinitions', clientRequestId='30e03de0-abeb-4d50-a6b2-5e817e967161', operationStatus='RanToCompletion', durationInMilliseconds='7', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 204,
+        "httpStatusMessage": "No Content",
+        "etag": "W/\u0022datetime\u00272021-10-29T06%3A14%3A32.6723962Z\u0027\u0022",
+        "serviceRequestID": "2d2c02c2-7002-004b-798c-cc4f90000000",
+        "startTime": "2021-10-29T06:14:32.6687120Z",
+        "endTime": "2021-10-29T06:14:32.6758428Z"
+    }
+]', organizationId='', activityVector='IN.00', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='arrests-logic-app-poc', slotName='Production', activityId='8b7bf6e1-fd4e-48cd-80d6-f16d00190085'.
+    2021-10-29T06: 14: 33Z   [Verbose
+]   Storage operation completed: correlationId='', operationName='BackgroundJobsDataProvider.GetJobDefinitionsByPartition', accountName='sandboxclearforceapi', resourceType='table', resourceName='flow5968aa2e70bd6dbjobdefinitions', clientRequestId='f985afbc-fe06-40f2-a970-3585e2efa738', operationStatus='RanToCompletion', durationInMilliseconds='4', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 200,
+        "httpStatusMessage": "OK",
+        "serviceRequestID": "2d2c02c3-7002-004b-7a8c-cc4f90000000",
+        "startTime": "2021-10-29T06:14:32.6764099Z",
+        "endTime": "2021-10-29T06:14:32.6815459Z"
+    }
+]', organizationId='', activityVector='IN.00', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='arrests-logic-app-poc', slotName='Production', activityId='8b7bf6e1-fd4e-48cd-80d6-f16d00190085'.
+    2021-10-29T06: 14: 33Z   [Verbose
+]   Job history: jobPartition='SYSTEMJOBS-CU00', jobId='DIAGNOSTICJOB-40000', callback='SystemDiagnosticJob', startTime='Fri,
+29 Oct 2021 06: 14: 32 GMT', endTime='Fri,
+29 Oct 2021 06: 14: 32 GMT', executionTimeInMilliseconds='5.4747', executionDelayInMilliseconds='676.3683', executionIntervalInMilliseconds='3599991.5147', executionStatus='Succeeded', executionMessage='Completed system diagnostic job for partition '40000'.', executionDetails='', nextExecutionTime='Fri,
+29 Oct 2021 07: 14: 32 GMT', correlationId='', dequeueCount='85', advanceVersion='False', triggerId='a0faeb5e-a180-4baf-876d-e164f9dc79b2', messageId='3cdb329e-ed42-4093-bb5d-d01f116713b8', state='Enabled', organizationId='', activityVector='', additionalProperties='', jobDurabilityLevel='Strong', extensionVersion='1.0.0.0', siteName='arrests-logic-app-poc', slotName='Production', activityId='8b7bf6e1-fd4e-48cd-80d6-f16d00190085'.
+    2021-10-29T06: 14: 33Z   [Verbose
+]   Storage operation completed: correlationId='', operationName='BackgroundJobsDataProvider.UpdateJobDefinition', accountName='sandboxclearforceapi', resourceType='table', resourceName='flow5968aa2e70bd6dbjobdefinitions', clientRequestId='99f7ec67-d436-41ed-b644-da552aa44d4d', operationStatus='RanToCompletion', durationInMilliseconds='9', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 204,
+        "httpStatusMessage": "No Content",
+        "etag": "W/\u0022datetime\u00272021-10-29T06%3A14%3A32.6863887Z\u0027\u0022",
+        "serviceRequestID": "2d2c02c4-7002-004b-7b8c-cc4f90000000",
+        "startTime": "2021-10-29T06:14:32.6825441Z",
+        "endTime": "2021-10-29T06:14:32.6922208Z"
+    }
+]', organizationId='', activityVector='IN.00', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='arrests-logic-app-poc', slotName='Production', activityId='8b7bf6e1-fd4e-48cd-80d6-f16d00190085'.
+    2021-10-29T06: 14: 33Z   [Verbose
+]   Storage operation completed: correlationId='', operationName='BackgroundJobsDataProvider.UpdateJobTriggerVisibilityDelay', accountName='sandboxclearforceapi', resourceType='queue', resourceName='flow5968aa2e70bd6dbjobtriggers00', clientRequestId='1729f711-3220-4c63-97a4-31aa4b4b0000', operationStatus='RanToCompletion', durationInMilliseconds='5', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 204,
+        "httpStatusMessage": "No Content",
+        "serviceRequestID": "a68ce5e2-f003-0037-0b8c-cc616f000000",
+        "startTime": "2021-10-29T06:14:32.6926357Z",
+        "endTime": "2021-10-29T06:14:32.6978500Z"
+    }
+]', organizationId='', activityVector='IN.00', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='arrests-logic-app-poc', slotName='Production', activityId='8b7bf6e1-fd4e-48cd-80d6-f16d00190085'.
+    2021-10-29T06: 14: 37Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 5588): History=(1,
+1,
+0,
+0,
+0), AvgCpuLoad=0, MaxCpuLoad=1
+    2021-10-29T06: 14: 37Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 14: 37Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 14: 37Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 6372): History=(0,
+0,
+0,
+0,
+0), AvgCpuLoad=0, MaxCpuLoad=0
+    2021-10-29T06: 14: 37Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 14: 37Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+    2021-10-29T06: 14: 39Z   [Verbose
+]   [HostMonitor
+] Host process CPU stats (PID 6764): History=(0,
+0,
+0,
+0,
+0), AvgCpuLoad=0, MaxCpuLoad=0
+    2021-10-29T06: 14: 39Z   [Verbose
+]   [HostMonitor
+] Host aggregate CPU load 0
+    2021-10-29T06: 14: 39Z   [Information
+]   Executing HttpStatusCodeResult, setting HTTP status code 200
+
+Connected!
+2021-10-29T06: 23: 12  Welcome, you are now connected to log-streaming service. The default timeout is 2 hours. Change the timeout with the App Setting SCM_LOGSTREAM_TIMEOUT (in seconds).
+2021-10-29T06: 23: 17.549 [Information
+] Host Status: {
+    "id": "cfmonitoredarrestslapp",
+    "state": "Running",
+    "version": "3.3.1.0",
+    "versionDetails": "3.3.1 Commit hash: bd2b318013cee8d608c88203ec4ee3516d2a9961",
+    "platformVersion": "95.0.7.554",
+    "instanceId": "6434eb4bb5d8ded286308b187ea4105e787e1cd54bfe287fe116e71a375e9837",
+    "computerName": "pd1mdwk0001H6",
+    "processUptime": 1275420,
+    "extensionBundle": {
+        "id": "Microsoft.Azure.Functions.ExtensionBundle.Workflows",
+        "version": "1.1.27"
+    }
+}
+2021-10-29T06: 23: 17.607 [Information
+] Host Status: {
+    "id": "cfmonitoredarrestslapp",
+    "state": "Running",
+    "version": "3.3.1.0",
+    "versionDetails": "3.3.1 Commit hash: bd2b318013cee8d608c88203ec4ee3516d2a9961",
+    "platformVersion": "95.0.7.554",
+    "instanceId": "6434eb4bb5d8ded286308b187ea4105e787e1cd54bfe287fe116e71a375e9837",
+    "computerName": "pd1mdwk0001H6",
+    "processUptime": 1275479,
+    "extensionBundle": {
+        "id": "Microsoft.Azure.Functions.ExtensionBundle.Workflows",
+        "version": "1.1.27"
+    }
+}
+2021-10-29T06: 23: 25.440 [Trace
+] Storage operation completed: correlationId='', operationName='BackgroundJobsDataProvider.UpdateJobDefinition', accountName='storageaccountcfappb9ca', resourceType='table', resourceName='floweaffb5a68d273cfjobdefinitions', clientRequestId='cf1dd6cc-ee87-4cbc-b1c1-72482c32caa6', operationStatus='RanToCompletion', durationInMilliseconds='6', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 204,
+        "httpStatusMessage": "No Content",
+        "etag": "W/\u0022datetime\u00272021-10-29T06%3A23%3A25.4392694Z\u0027\u0022",
+        "serviceRequestID": "c8c92e59-2002-006f-638d-cc04f2000000",
+        "startTime": "2021-10-29T06:23:25.4291662Z",
+        "endTime": "2021-10-29T06:23:25.4386562Z"
+    }
+]', organizationId='', activityVector='IN.00', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='8a28d566-12ac-443e-8b77-7ea8c883fe79'.
+2021-10-29T06: 23: 25.627 [Trace
+] Storage operation completed: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='StorageDataProvider.Find.FlowRuntimeContext', accountName='storageaccountcfappb9ca', resourceType='table', resourceName='floweaffb5a68d273cfflowruntimecontext', clientRequestId='9562dbbc-35e1-4832-b166-0de9defc9e03', operationStatus='RanToCompletion', durationInMilliseconds='6', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 200,
+        "httpStatusMessage": "OK",
+        "etag": "W/\u0022datetime\u00272021-10-29T06%3A23%3A03.3899374Z\u0027\u0022",
+        "serviceRequestID": "c8c92e7d-2002-006f-038d-cc04f2000000",
+        "startTime": "2021-10-29T06:23:25.6210157Z",
+        "endTime": "2021-10-29T06:23:25.6277283Z"
+    }
+]', organizationId='', activityVector='IN.0V', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='8a28d566-12ac-443e-8b77-7ea8c883fe79'.
+2021-10-29T06: 23: 25.657 [Information
+] Workflow trigger starts. flowName='monitoredArrestLapp', triggerName='When_there_are_messages_in_a_queue', flowId='817b0dff4fae4e7f873702450cadad2a', flowSequenceId='08585661189034694682', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', status='', statusCode='', error='', durationInMilliseconds='-1', flowRunSequenceId='', inputsContentSize='-1', outputsContentSize='-1', clientTrackingId='', properties='{
+    "$schema": "2016-06-01",
+    "startTime": "2021-10-29T06:23:25.6394352Z",
+    "status": "Running",
+    "resource": {
+        "workflowId": "817b0dff4fae4e7f873702450cadad2a",
+        "workflowName": "monitoredArrestLapp",
+        "runId": "08585661182798390259029736376CU00",
+        "triggerName": "When_there_are_messages_in_a_queue"
+    },
+    "correlation": {}
+}', triggerType='ApiConnection', flowScaleUnit='cu00', triggerKind='', sourceTriggerHistoryName='', failureCause='', activityId='8a28d566-12ac-443e-8b77-7ea8c883fe79'.
+2021-10-29T06: 23: 25.743 [Trace
+] Job debug message: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='FlowRetryableJobCallback.GetApiHubHttpAuthentication', jobPartition='817B0DFF4FAE4E7F873702450CADAD2A', jobId='FlowTriggerJob-WHEN: 5FTHERE: 5FARE: 5FMESSAGES: 5FIN: 5FA: 5FQUEUE', message='Calling apiHub APIM endpoint using connection key-based authentication provided in connection reference to target uri 'https: //8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/azurequeues/f93a9bac22154b389a0d00acc30a03c2/v2/storageAccounts/sandboxclearforceapi/queues/arrests/message_trigger'.', exception='<null>', organizationId='', activityVector='IN.0U', additionalProperties='{"ParentActivityId":"00-1a4da77c9bed384e826cfcedfb6275ba-af9a16b4229f834c-00"}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='8a28d566-12ac-443e-8b77-7ea8c883fe79'.
+2021-10-29T06: 23: 25.764 [Debug
+] Debug message: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='EdgeOAuthTokenProvider.GetToken', message='Retrive token from local managed identity store for workflow app system assigned managed identity with authenticationUri: http: //127.0.0.1:41399/MSI/token/ resource: https://management.core.windows.net/', exception='<null>', organizationId='', activityVector='IN.0U', additionalProperties='{"ParentActivityId":"00-1a4da77c9bed384e826cfcedfb6275ba-af9a16b4229f834c-00"}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='8a28d566-12ac-443e-8b77-7ea8c883fe79'.
+2021-10-29T06: 23: 25.793 [Debug
+] Outgoing HTTP request starts: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='GET/MSI/', httpMethod='GET', hostName='127.0.0.1', targetUri='http: //127.0.0.1:41399/MSI/token/?resource=https%3a%2f%2fmanagement.core.windows.net%2f&api-version=2019-08-01', clientRequestId='62b29f8f4c9f487aba5dbc69fe7030b3', clientSessionId='', clientApplicationId='', apiVersion='2019-08-01', contentLength='-1', serviceRequestId='', durationInMilliseconds='-1', httpStatusCode='-1', exceptionMessage='', errorCode='', errorMessage='', referer='<null>', failureCause='', contentType='', contentEncoding='', armServiceRequestId='', organizationId='', activityVector='IN.0V', locale='', additionalProperties='{"ParentActivityId":"00-1a4da77c9bed384e826cfcedfb6275ba-af9a16b4229f834c-00"}', targetResourceProvider='', targetResourceType='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='8a28d566-12ac-443e-8b77-7ea8c883fe79'.
+2021-10-29T06: 23: 26.741 [Debug
+] Outgoing HTTP request succeeded: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='GET/MSI/', httpMethod='GET', hostName='127.0.0.1', targetUri='http: //127.0.0.1:41399/MSI/token/?resource=https%3a%2f%2fmanagement.core.windows.net%2f&api-version=2019-08-01', clientRequestId='62b29f8f4c9f487aba5dbc69fe7030b3', clientSessionId='', clientApplicationId='', apiVersion='2019-08-01', contentLength='1656', serviceRequestId='', durationInMilliseconds='948', httpStatusCode='200', exceptionMessage='', errorCode='', errorMessage='', referer='<null>', failureCause='', contentType='', contentEncoding='', armServiceRequestId='', organizationId='', activityVector='IN.0V', locale='', additionalProperties='{"ParentActivityId":"00-1a4da77c9bed384e826cfcedfb6275ba-af9a16b4229f834c-00"}', targetResourceProvider='', targetResourceType='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='8a28d566-12ac-443e-8b77-7ea8c883fe79'.
+2021-10-29T06: 23: 26.751 [Debug
+] Debug message: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='EdgeOAuthTokenProvider.GetManagedIdentityToken', message='Successfully retrived managed identity oauth token for authenticationUri: http: //127.0.0.1:41399/MSI/token/ resource: https://management.core.windows.net/ tokenType Bearer', exception='<null>', organizationId='', activityVector='IN.0W', additionalProperties='{"ParentActivityId":"00-1a4da77c9bed384e826cfcedfb6275ba-af9a16b4229f834c-00"}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='8a28d566-12ac-443e-8b77-7ea8c883fe79'.
+2021-10-29T06: 23: 26.757 [Debug
+] Debug message: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='HttpRequestMessageExtensions.AddOAuthHeader', message='Sending request to 'https: //8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/' using OAuth with tenantId 'WorkflowAppSystemAssignedManagedIdentityTenant', clientId 'WorkflowAppSystemAssignedManagedIdentityClient' and audience 'https://management.core.windows.net/'.', exception='<null>', organizationId='', activityVector='IN.0W', additionalProperties='{"ParentActivityId":"00-1a4da77c9bed384e826cfcedfb6275ba-af9a16b4229f834c-00"}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='8a28d566-12ac-443e-8b77-7ea8c883fe79'.
+2021-10-29T06: 23: 26.769 [Debug
+] Outgoing HTTP request starts: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='CallApiHubEndpoint.Trigger.CustomApi/azurequeues', httpMethod='GET', hostName='8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net', targetUri='https: //8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/azurequeues/f93a9bac22154b389a0d00acc30a03c2/v2/storageAccounts/sandboxclearforceapi/queues/arrests/message_trigger', clientRequestId='8a28d566-12ac-443e-8b77-7ea8c883fe79', clientSessionId='', clientApplicationId='', apiVersion='', contentLength='-1', serviceRequestId='', durationInMilliseconds='-1', httpStatusCode='-1', exceptionMessage='', errorCode='', errorMessage='', referer='<null>', failureCause='', contentType='', contentEncoding='', armServiceRequestId='', organizationId='', activityVector='IN.0X', locale='en-US', additionalProperties='{"ParentActivityId":"00-1a4da77c9bed384e826cfcedfb6275ba-af9a16b4229f834c-00"}', targetResourceProvider='', targetResourceType='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='8a28d566-12ac-443e-8b77-7ea8c883fe79'.
+2021-10-29T06: 23: 26.979 [Debug
+] Outgoing HTTP request succeeded: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='CallApiHubEndpoint.Trigger.CustomApi/azurequeues', httpMethod='GET', hostName='8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net', targetUri='https: //8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/azurequeues/f93a9bac22154b389a0d00acc30a03c2/v2/storageAccounts/sandboxclearforceapi/queues/arrests/message_trigger', clientRequestId='8a28d566-12ac-443e-8b77-7ea8c883fe79', clientSessionId='', clientApplicationId='', apiVersion='', contentLength='0', serviceRequestId='102334a5-4003-001d-348d-ccbe7f000000', durationInMilliseconds='210', httpStatusCode='202', exceptionMessage='', errorCode='', errorMessage='', referer='<null>', failureCause='', contentType='', contentEncoding='', armServiceRequestId='', organizationId='', activityVector='IN.0X', locale='en-US', additionalProperties='{"ParentActivityId":"00-1a4da77c9bed384e826cfcedfb6275ba-af9a16b4229f834c-00"}', targetResourceProvider='', targetResourceType='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='8a28d566-12ac-443e-8b77-7ea8c883fe79'.
+2021-10-29T06: 23: 26.985 [Trace
+] Job debug message: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='FlowRetryableTriggerJobCallback.HandleResponseMessage', jobPartition='817B0DFF4FAE4E7F873702450CADAD2A', jobId='FlowTriggerJob-WHEN: 5FTHERE: 5FARE: 5FMESSAGES: 5FIN: 5FA: 5FQUEUE', message='Received response with continuation. Original request uri: 'https: //8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/azurequeues/f93a9bac22154b389a0d00acc30a03c2/v2/storageAccounts/sandboxclearforceapi/queues/arrests/message_trigger'. Location header: 'https://8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/azurequeues/f93a9bac22154b389a0d00acc30a03c2/v2/storageAccounts/sandboxclearforceapi/queues/arrests/message_trigger'. Retry-after header: '60'.', exception='<null>', organizationId='', activityVector='IN.0Y', additionalProperties='{"ParentActivityId":"00-1a4da77c9bed384e826cfcedfb6275ba-af9a16b4229f834c-00"}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='8a28d566-12ac-443e-8b77-7ea8c883fe79'.
+2021-10-29T06: 23: 26.999 [Trace
+] Job debug message: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='FlowRecurrentTriggerJobCallback.UploadTriggerResultAndStartRun', jobPartition='817B0DFF4FAE4E7F873702450CADAD2A', jobId='FlowTriggerJob-WHEN: 5FTHERE: 5FARE: 5FMESSAGES: 5FIN: 5FA: 5FQUEUE', message='Completed execution of trigger callback. Status: 'Skipped'. Code: 'Accepted'. JobExecutionStatus: 'Succeeded'. Job version '3'.', exception='<null>', organizationId='', activityVector='IN.0Y', additionalProperties='{
+    "ParentActivityId": "00-1a4da77c9bed384e826cfcedfb6275ba-af9a16b4229f834c-00"
+}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='8a28d566-12ac-443e-8b77-7ea8c883fe79'.
+2021-10-29T06: 23: 27.083 [Trace
+] Job debug message: correlationId='', operationName='JobCallback.ExecuteAsync', jobPartition='817B0DFF4FAE4E7F873702450CADAD2A', jobId='FlowTriggerJob-WHEN: 5FTHERE: 5FARE: 5FMESSAGES: 5FIN: 5FA: 5FQUEUE', message='Background job operation 'ApiConnectionTriggerJob' completed with status 'Succeeded', message 'Accepted' and details '<null>' '1537' milliseconds from start.', exception='<null>', organizationId='', activityVector='', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='8a28d566-12ac-443e-8b77-7ea8c883fe79'.
+2021-10-29T06: 23: 27.149 [Trace
+] Storage operation completed: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='StorageArtifactsHelper.CreateTableIfNotExist', accountName='storageaccountcfappb9ca', resourceType='table', resourceName='floweaffb5a68d273cf1452a520ba20957histories', clientRequestId='f8e5c1ec-5dbd-4dc6-b8c5-37ca11d5c1e5', operationStatus='RanToCompletion', durationInMilliseconds='2', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 409,
+        "httpStatusMessage": "Conflict",
+        "serviceRequestID": "c8c92f68-2002-006f-5b8d-cc04f2000000",
+        "startTime": "2021-10-29T06:23:27.1406235Z",
+        "endTime": "2021-10-29T06:23:27.1470247Z"
+    }
+]', organizationId='', activityVector='IN.0V', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='8a28d566-12ac-443e-8b77-7ea8c883fe79'.
+2021-10-29T06: 23: 27.164 [Trace
+] Storage operation completed: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='StorageDataProvider.Save.FlowTriggerHistory', accountName='storageaccountcfappb9ca', resourceType='table', resourceName='floweaffb5a68d273cf1452a520ba20957histories', clientRequestId='f74faac9-3363-4422-9bc1-ea3a45801091', operationStatus='RanToCompletion', durationInMilliseconds='5', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 204,
+        "httpStatusMessage": "No Content",
+        "etag": "W/\u0022datetime\u00272021-10-29T06%3A23%3A27.1652772Z\u0027\u0022",
+        "serviceRequestID": "c8c92f6b-2002-006f-5d8d-cc04f2000000",
+        "startTime": "2021-10-29T06:23:27.1587394Z",
+        "endTime": "2021-10-29T06:23:27.1646460Z"
+    }
+]', organizationId='', activityVector='IN.0X', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='8a28d566-12ac-443e-8b77-7ea8c883fe79'.
+2021-10-29T06: 23: 27.172 [Information
+] Workflow trigger ends. flowName='monitoredArrestLapp', triggerName='When_there_are_messages_in_a_queue', flowId='817b0dff4fae4e7f873702450cadad2a', flowSequenceId='08585661189034694682', status='Skipped', statusCode='Accepted', error='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', durationInMilliseconds='1464', flowRunSequenceId='', inputsContentSize='153', outputsContentSize='549', clientTrackingId='08585661182798390259029736376CU00', properties='{
+    "$schema": "2016-06-01",
+    "startTime": "2021-10-29T06:23:25.6394352Z",
+    "endTime": "2021-10-29T06:23:27.1699203Z",
+    "status": "Skipped",
+    "code": "Accepted",
+    "resource": {
+        "workflowId": "817b0dff4fae4e7f873702450cadad2a",
+        "workflowName": "monitoredArrestLapp",
+        "runId": "08585661182798390259029736376CU00",
+        "triggerName": "When_there_are_messages_in_a_queue"
+    },
+    "correlation": {
+        "clientTrackingId": "08585661182798390259029736376CU00"
+    }
+}', triggerType='ApiConnection', flowScaleUnit='cu00', triggerKind='', sourceTriggerHistoryName='', failureCause='', overrideUsageConfigurationName='', activityId='8a28d566-12ac-443e-8b77-7ea8c883fe79'.
+2021-10-29T06: 23: 27.194 [Debug
+] Job history: jobPartition='817B0DFF4FAE4E7F873702450CADAD2A', jobId='FlowTriggerJob-WHEN: 5FTHERE: 5FARE: 5FMESSAGES: 5FIN: 5FA: 5FQUEUE', callback='ApiConnectionTriggerJob', startTime='Fri,
+29 Oct 2021 06: 23: 25 GMT', endTime='Fri,
+29 Oct 2021 06: 23: 27 GMT', executionTimeInMilliseconds='1731.4487', executionDelayInMilliseconds='748.6213', executionIntervalInMilliseconds='60776.2843', executionStatus='Succeeded', executionMessage='Accepted', executionDetails='', nextExecutionTime='Fri,
+29 Oct 2021 06: 24: 26 GMT', correlationId='', dequeueCount='1', advanceVersion='False', triggerId='128def3d-45d3-46a1-b2ca-1c3d45e64838', messageId='c2a9c933-ed4a-46c3-9e3d-6705dd0e9ae5', state='Enabled', organizationId='', activityVector='', additionalProperties='', jobDurabilityLevel='Strong', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='8a28d566-12ac-443e-8b77-7ea8c883fe79'.
+2021-10-29T06: 23: 27.214 [Trace
+] Storage operation completed: correlationId='', operationName='BackgroundJobsDataProvider.UpdateJobDefinition', accountName='storageaccountcfappb9ca', resourceType='table', resourceName='floweaffb5a68d273cfjobdefinitions', clientRequestId='3aaac7f8-f599-4627-bd59-1e934dcee7f3', operationStatus='RanToCompletion', durationInMilliseconds='5', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 204,
+        "httpStatusMessage": "No Content",
+        "etag": "W/\u0022datetime\u00272021-10-29T06%3A23%3A27.2152487Z\u0027\u0022",
+        "serviceRequestID": "c8c92f6f-2002-006f-618d-cc04f2000000",
+        "startTime": "2021-10-29T06:23:27.2079224Z",
+        "endTime": "2021-10-29T06:23:27.2141763Z"
+    }
+]', organizationId='', activityVector='IN.00', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='8a28d566-12ac-443e-8b77-7ea8c883fe79'.
+2021-10-29T06: 23: 27.242 [Trace
+] Storage operation completed: correlationId='', operationName='BackgroundJobsDataProvider.UpdateJobTriggerVisibilityDelay', accountName='storageaccountcfappb9ca', resourceType='queue', resourceName='floweaffb5a68d273cfjobtriggers00', clientRequestId='5c7f465c-90b8-4501-aaa4-ae1499e9c4be', operationStatus='RanToCompletion', durationInMilliseconds='1', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 204,
+        "httpStatusMessage": "No Content",
+        "serviceRequestID": "959e9756-3003-0070-688d-ccdfe2000000",
+        "startTime": "2021-10-29T06:23:27.2339614Z",
+        "endTime": "2021-10-29T06:23:27.2394583Z"
+    }
+]', organizationId='', activityVector='IN.00', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='8a28d566-12ac-443e-8b77-7ea8c883fe79'.
+2021-10-29T06: 23: 56.730 [Trace
+] Storage operation completed: correlationId='', operationName='BackgroundJobsDataProvider.UpdateJobDefinition', accountName='storageaccountcfappb9ca', resourceType='table', resourceName='floweaffb5a68d273cfjobdefinitions', clientRequestId='742a9998-b076-4f67-af84-2aa0b540aacf', operationStatus='RanToCompletion', durationInMilliseconds='4', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 204,
+        "httpStatusMessage": "No Content",
+        "etag": "W/\u0022datetime\u00272021-10-29T06%3A23%3A56.730144Z\u0027\u0022",
+        "serviceRequestID": "c4ea9d75-5002-00e3-038d-cc49a9000000",
+        "startTime": "2021-10-29T06:23:56.7259238Z",
+        "endTime": "2021-10-29T06:23:56.7307395Z"
+    }
+]', organizationId='', activityVector='IN.00', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='7688b5c5-c7bc-4641-bcb2-67f27dd8e69b'.
+2021-10-29T06: 23: 56.749 [Trace
+] Storage operation completed: correlationId='', operationName='BackgroundJobsDataProvider.GetJobDefinitionsByPartition', accountName='storageaccountcfappb9ca', resourceType='table', resourceName='floweaffb5a68d273cfjobdefinitions', clientRequestId='7d79168e-dda7-48d6-9ff4-4296d30af494', operationStatus='RanToCompletion', durationInMilliseconds='6', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 200,
+        "httpStatusMessage": "OK",
+        "serviceRequestID": "c4ea9d79-5002-00e3-078d-cc49a9000000",
+        "startTime": "2021-10-29T06:23:56.7423389Z",
+        "endTime": "2021-10-29T06:23:56.7489031Z"
+    }
+]', organizationId='', activityVector='IN.00', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='7688b5c5-c7bc-4641-bcb2-67f27dd8e69b'.
+2021-10-29T06: 23: 56.758 [Trace
+] Job definition: jobPartition='SYSTEMJOBS-CU00', jobId='CONSISTENCYJOB', version='0', callback='SystemConsistencyJob', location='CU00', locationsAffinity='CU00', flags='None', state='Enabled', executionState='Waiting', startTime='Sat,
+24 Jan 1970 16: 04: 15 GMT', endTime='', repeatCount='2147483647', repeatInterval='36000000000', repeatUnit='Tick', repeatSchedule='', currentRepeatCount='1', retryCount='2147483647', retryInterval='36000000000', retryUnit='Tick', currentRetryCount='0', currentExecutionCount='1', timeout='00: 45: 00', retention='', nextExecutionTime='Fri,
+29 Oct 2021 07: 04: 15 GMT', lastExecutionTime='Fri,
+29 Oct 2021 06: 04: 14 GMT', lastExecutionStatus='Succeeded', createdTime='Fri,
+29 Oct 2021 05: 57: 46 GMT', changedTime='Fri,
+29 Oct 2021 06: 04: 15 GMT', correlationId='', totalSucceededCount='1', totalCompletedCount='0', totalFailedCount='0', totalFaultedCount='0', totalPostponedCount='0', parentJobCompletionTrigger='', organizationId='', activityVector='', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='7688b5c5-c7bc-4641-bcb2-67f27dd8e69b'.
+2021-10-29T06: 23: 56.761 [Trace
+] Job definition: jobPartition='SYSTEMJOBS-CU00', jobId='DIAGNOSTICJOB-00000', version='0', callback='SystemDiagnosticJob', location='CU00', locationsAffinity='CU00', flags='None', state='Enabled', executionState='Waiting', startTime='Sat,
+24 Jan 1970 17: 35: 49 GMT', endTime='', repeatCount='2147483647', repeatInterval='36000000000', repeatUnit='Tick', repeatSchedule='', currentRepeatCount='0', retryCount='2147483647', retryInterval='36000000000', retryUnit='Tick', currentRetryCount='0', currentExecutionCount='0', timeout='00: 45: 00', retention='', nextExecutionTime='Fri,
+29 Oct 2021 06: 35: 49 GMT', lastExecutionTime='', lastExecutionStatus='', createdTime='Fri,
+29 Oct 2021 06: 04: 15 GMT', changedTime='Fri,
+29 Oct 2021 06: 04: 15 GMT', correlationId='', totalSucceededCount='0', totalCompletedCount='0', totalFailedCount='0', totalFaultedCount='0', totalPostponedCount='0', parentJobCompletionTrigger='', organizationId='', activityVector='', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='7688b5c5-c7bc-4641-bcb2-67f27dd8e69b'.
+2021-10-29T06: 23: 56.761 [Trace
+] Job definition: jobPartition='SYSTEMJOBS-CU00', jobId='DIAGNOSTICJOB-40000', version='0', callback='SystemDiagnosticJob', location='CU00', locationsAffinity='CU00', flags='None', state='Enabled', executionState='Waiting', startTime='Mon,
+05 Jan 1970 12: 14: 32 GMT', endTime='', repeatCount='2147483647', repeatInterval='36000000000', repeatUnit='Tick', repeatSchedule='', currentRepeatCount='1', retryCount='2147483647', retryInterval='36000000000', retryUnit='Tick', currentRetryCount='0', currentExecutionCount='1', timeout='00: 45: 00', retention='', nextExecutionTime='Fri,
+29 Oct 2021 07: 14: 32 GMT', lastExecutionTime='Fri,
+29 Oct 2021 06: 14: 32 GMT', lastExecutionStatus='Succeeded', createdTime='Fri,
+29 Oct 2021 06: 04: 15 GMT', changedTime='Fri,
+29 Oct 2021 06: 14: 32 GMT', correlationId='', totalSucceededCount='1', totalCompletedCount='0', totalFailedCount='0', totalFaultedCount='0', totalPostponedCount='0', parentJobCompletionTrigger='', organizationId='', activityVector='', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='7688b5c5-c7bc-4641-bcb2-67f27dd8e69b'.
+2021-10-29T06: 23: 56.761 [Trace
+] Job definition: jobPartition='SYSTEMJOBS-CU00', jobId='DIAGNOSTICJOB-80000', version='0', callback='SystemDiagnosticJob', location='CU00', locationsAffinity='CU00', flags='None', state='Enabled', executionState='Waiting', startTime='Fri,
+23 Jan 1970 22: 49: 59 GMT', endTime='', repeatCount='2147483647', repeatInterval='36000000000', repeatUnit='Tick', repeatSchedule='', currentRepeatCount='0', retryCount='2147483647', retryInterval='36000000000', retryUnit='Tick', currentRetryCount='0', currentExecutionCount='0', timeout='00: 45: 00', retention='', nextExecutionTime='Fri,
+29 Oct 2021 06: 49: 59 GMT', lastExecutionTime='', lastExecutionStatus='', createdTime='Fri,
+29 Oct 2021 06: 04: 15 GMT', changedTime='Fri,
+29 Oct 2021 06: 04: 15 GMT', correlationId='', totalSucceededCount='0', totalCompletedCount='0', totalFailedCount='0', totalFaultedCount='0', totalPostponedCount='0', parentJobCompletionTrigger='', organizationId='', activityVector='', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='7688b5c5-c7bc-4641-bcb2-67f27dd8e69b'.
+2021-10-29T06: 23: 56.762 [Trace
+] Job definition: jobPartition='SYSTEMJOBS-CU00', jobId='DIAGNOSTICJOB-C0000', version='0', callback='SystemDiagnosticJob', location='CU00', locationsAffinity='CU00', flags='None', state='Enabled', executionState='Waiting', startTime='Mon,
+05 Jan 1970 00: 41: 11 GMT', endTime='', repeatCount='2147483647', repeatInterval='36000000000', repeatUnit='Tick', repeatSchedule='', currentRepeatCount='0', retryCount='2147483647', retryInterval='36000000000', retryUnit='Tick', currentRetryCount='0', currentExecutionCount='0', timeout='00: 45: 00', retention='', nextExecutionTime='Fri,
+29 Oct 2021 06: 41: 11 GMT', lastExecutionTime='', lastExecutionStatus='', createdTime='Fri,
+29 Oct 2021 06: 04: 15 GMT', changedTime='Fri,
+29 Oct 2021 06: 04: 15 GMT', correlationId='', totalSucceededCount='0', totalCompletedCount='0', totalFailedCount='0', totalFaultedCount='0', totalPostponedCount='0', parentJobCompletionTrigger='', organizationId='', activityVector='', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='7688b5c5-c7bc-4641-bcb2-67f27dd8e69b'.
+2021-10-29T06: 23: 56.762 [Trace
+] Job definition: jobPartition='SYSTEMJOBS-CU00', jobId='TELEMETRYJOB-00000', version='0', callback='SystemTelemetryJob', location='CU00', locationsAffinity='CU00', flags='None', state='Enabled', executionState='Waiting', startTime='Thu,
+08 Jan 1970 08: 41: 18 GMT', endTime='', repeatCount='2147483647', repeatInterval='36000000000', repeatUnit='Tick', repeatSchedule='', currentRepeatCount='0', retryCount='2147483647', retryInterval='36000000000', retryUnit='Tick', currentRetryCount='0', currentExecutionCount='0', timeout='00: 45: 00', retention='', nextExecutionTime='Fri,
+29 Oct 2021 06: 41: 18 GMT', lastExecutionTime='', lastExecutionStatus='', createdTime='Fri,
+29 Oct 2021 06: 04: 15 GMT', changedTime='Fri,
+29 Oct 2021 06: 04: 15 GMT', correlationId='', totalSucceededCount='0', totalCompletedCount='0', totalFailedCount='0', totalFaultedCount='0', totalPostponedCount='0', parentJobCompletionTrigger='', organizationId='', activityVector='', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='7688b5c5-c7bc-4641-bcb2-67f27dd8e69b'.
+2021-10-29T06: 23: 56.762 [Trace
+] Job definition: jobPartition='SYSTEMJOBS-CU00', jobId='TELEMETRYJOB-40000', version='0', callback='SystemTelemetryJob', location='CU00', locationsAffinity='CU00', flags='None', state='Enabled', executionState='Waiting', startTime='Wed,
+28 Jan 1970 09: 28: 59 GMT', endTime='', repeatCount='2147483647', repeatInterval='36000000000', repeatUnit='Tick', repeatSchedule='', currentRepeatCount='0', retryCount='2147483647', retryInterval='36000000000', retryUnit='Tick', currentRetryCount='0', currentExecutionCount='0', timeout='00: 45: 00', retention='', nextExecutionTime='Fri,
+29 Oct 2021 06: 28: 59 GMT', lastExecutionTime='', lastExecutionStatus='', createdTime='Fri,
+29 Oct 2021 06: 04: 15 GMT', changedTime='Fri,
+29 Oct 2021 06: 04: 15 GMT', correlationId='', totalSucceededCount='0', totalCompletedCount='0', totalFailedCount='0', totalFaultedCount='0', totalPostponedCount='0', parentJobCompletionTrigger='', organizationId='', activityVector='', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='7688b5c5-c7bc-4641-bcb2-67f27dd8e69b'.
+2021-10-29T06: 23: 56.762 [Trace
+] Job definition: jobPartition='SYSTEMJOBS-CU00', jobId='TELEMETRYJOB-80000', version='0', callback='SystemTelemetryJob', location='CU00', locationsAffinity='CU00', flags='None', state='Enabled', executionState='Running', startTime='Fri,
+09 Jan 1970 13: 23: 56 GMT', endTime='', repeatCount='2147483647', repeatInterval='36000000000', repeatUnit='Tick', repeatSchedule='', currentRepeatCount='0', retryCount='2147483647', retryInterval='36000000000', retryUnit='Tick', currentRetryCount='0', currentExecutionCount='0', timeout='00: 45: 00', retention='', nextExecutionTime='Fri,
+29 Oct 2021 06: 23: 56 GMT', lastExecutionTime='', lastExecutionStatus='', createdTime='Fri,
+29 Oct 2021 06: 04: 15 GMT', changedTime='Fri,
+29 Oct 2021 06: 23: 56 GMT', correlationId='', totalSucceededCount='0', totalCompletedCount='0', totalFailedCount='0', totalFaultedCount='0', totalPostponedCount='0', parentJobCompletionTrigger='', organizationId='', activityVector='', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='7688b5c5-c7bc-4641-bcb2-67f27dd8e69b'.
+2021-10-29T06: 23: 56.762 [Trace
+] Job definition: jobPartition='SYSTEMJOBS-CU00', jobId='TELEMETRYJOB-C0000', version='0', callback='SystemTelemetryJob', location='CU00', locationsAffinity='CU00', flags='None', state='Enabled', executionState='Waiting', startTime='Sun,
+04 Jan 1970 18: 56: 01 GMT', endTime='', repeatCount='2147483647', repeatInterval='36000000000', repeatUnit='Tick', repeatSchedule='', currentRepeatCount='0', retryCount='2147483647', retryInterval='36000000000', retryUnit='Tick', currentRetryCount='0', currentExecutionCount='0', timeout='00: 45: 00', retention='', nextExecutionTime='Fri,
+29 Oct 2021 06: 56: 01 GMT', lastExecutionTime='', lastExecutionStatus='', createdTime='Fri,
+29 Oct 2021 06: 04: 15 GMT', changedTime='Fri,
+29 Oct 2021 06: 04: 15 GMT', correlationId='', totalSucceededCount='0', totalCompletedCount='0', totalFailedCount='0', totalFaultedCount='0', totalPostponedCount='0', parentJobCompletionTrigger='', organizationId='', activityVector='', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='7688b5c5-c7bc-4641-bcb2-67f27dd8e69b'.
+2021-10-29T06: 23: 56.765 [Debug
+] Job history: jobPartition='SYSTEMJOBS-CU00', jobId='TELEMETRYJOB-80000', callback='SystemTelemetryJob', startTime='Fri,
+29 Oct 2021 06: 23: 56 GMT', endTime='Fri,
+29 Oct 2021 06: 23: 56 GMT', executionTimeInMilliseconds='32.9091', executionDelayInMilliseconds='731.135', executionIntervalInMilliseconds='0', executionStatus='Succeeded', executionMessage='Completed system telemetry job for partition '80000'.', executionDetails='', nextExecutionTime='Fri,
+29 Oct 2021 07: 23: 56 GMT', correlationId='', dequeueCount='1', advanceVersion='False', triggerId='b77a3fd5-a2ba-4548-9ee3-01009c252a46', messageId='eaa27456-4069-412f-8df1-1fe8dce88265', state='Enabled', organizationId='', activityVector='', additionalProperties='', jobDurabilityLevel='Strong', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='7688b5c5-c7bc-4641-bcb2-67f27dd8e69b'.
+2021-10-29T06: 23: 56.771 [Trace
+] Storage operation completed: correlationId='', operationName='BackgroundJobsDataProvider.UpdateJobDefinition', accountName='storageaccountcfappb9ca', resourceType='table', resourceName='floweaffb5a68d273cfjobdefinitions', clientRequestId='b2a40dfe-3cfc-401f-ae6f-2c99fd722214', operationStatus='RanToCompletion', durationInMilliseconds='6', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 204,
+        "httpStatusMessage": "No Content",
+        "etag": "W/\u0022datetime\u00272021-10-29T06%3A23%3A56.7711208Z\u0027\u0022",
+        "serviceRequestID": "c4ea9d7a-5002-00e3-088d-cc49a9000000",
+        "startTime": "2021-10-29T06:23:56.7655331Z",
+        "endTime": "2021-10-29T06:23:56.7719367Z"
+    }
+]', organizationId='', activityVector='IN.00', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='7688b5c5-c7bc-4641-bcb2-67f27dd8e69b'.
+2021-10-29T06: 23: 56.776 [Trace
+] Storage operation completed: correlationId='', operationName='BackgroundJobsDataProvider.UpdateJobTriggerVisibilityDelay', accountName='storageaccountcfappb9ca', resourceType='queue', resourceName='floweaffb5a68d273cfjobtriggers00', clientRequestId='1fc83955-9334-4e5a-8f76-b57ae3a31c55', operationStatus='RanToCompletion', durationInMilliseconds='4', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 204,
+        "httpStatusMessage": "No Content",
+        "serviceRequestID": "74d2711f-b003-0084-408d-ccfa0e000000",
+        "startTime": "2021-10-29T06:23:56.7721967Z",
+        "endTime": "2021-10-29T06:23:56.7767139Z"
+    }
+]', organizationId='', activityVector='IN.00', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='7688b5c5-c7bc-4641-bcb2-67f27dd8e69b'.
+2021-10-29T06: 24: 13.912 [Information
+] Host Status: {
+    "id": "cfmonitoredarrestslapp",
+    "state": "Running",
+    "version": "3.3.1.0",
+    "versionDetails": "3.3.1 Commit hash: bd2b318013cee8d608c88203ec4ee3516d2a9961",
+    "platformVersion": "95.0.7.554",
+    "instanceId": "6434eb4bb5d8ded286308b187ea4105e787e1cd54bfe287fe116e71a375e9837",
+    "computerName": "pd1mdwk0001H6",
+    "processUptime": 1331783,
+    "extensionBundle": {
+        "id": "Microsoft.Azure.Functions.ExtensionBundle.Workflows",
+        "version": "1.1.27"
+    }
+}
+2021-10-29T06: 24: 13.919 [Information
+] Host Status: {
+    "id": "cfmonitoredarrestslapp",
+    "state": "Running",
+    "version": "3.3.1.0",
+    "versionDetails": "3.3.1 Commit hash: bd2b318013cee8d608c88203ec4ee3516d2a9961",
+    "platformVersion": "95.0.7.554",
+    "instanceId": "6434eb4bb5d8ded286308b187ea4105e787e1cd54bfe287fe116e71a375e9837",
+    "computerName": "pd1mdwk0001H6",
+    "processUptime": 1331791,
+    "extensionBundle": {
+        "id": "Microsoft.Azure.Functions.ExtensionBundle.Workflows",
+        "version": "1.1.27"
+    }
+}
+2021-10-29T06: 24: 14.859 [Information
+] Host Status: {
+    "id": "cfmonitoredarrestslapp",
+    "state": "Running",
+    "version": "3.3.1.0",
+    "versionDetails": "3.3.1 Commit hash: bd2b318013cee8d608c88203ec4ee3516d2a9961",
+    "platformVersion": "95.0.7.554",
+    "instanceId": "6434eb4bb5d8ded286308b187ea4105e787e1cd54bfe287fe116e71a375e9837",
+    "computerName": "pd1mdwk0001H6",
+    "processUptime": 1332731,
+    "extensionBundle": {
+        "id": "Microsoft.Azure.Functions.ExtensionBundle.Workflows",
+        "version": "1.1.27"
+    }
+}
+2021-10-29T06: 24: 14.900 [Information
+] Host Status: {
+    "id": "cfmonitoredarrestslapp",
+    "state": "Running",
+    "version": "3.3.1.0",
+    "versionDetails": "3.3.1 Commit hash: bd2b318013cee8d608c88203ec4ee3516d2a9961",
+    "platformVersion": "95.0.7.554",
+    "instanceId": "6434eb4bb5d8ded286308b187ea4105e787e1cd54bfe287fe116e71a375e9837",
+    "computerName": "pd1mdwk0001H6",
+    "processUptime": 1332771,
+    "extensionBundle": {
+        "id": "Microsoft.Azure.Functions.ExtensionBundle.Workflows",
+        "version": "1.1.27"
+    }
+}
+2021-10-29T06: 24: 28.127 [Trace
+] Storage operation completed: correlationId='', operationName='BackgroundJobsDataProvider.UpdateJobDefinition', accountName='storageaccountcfappb9ca', resourceType='table', resourceName='floweaffb5a68d273cfjobdefinitions', clientRequestId='3f568068-f3be-4107-b01e-a4cdb292625f', operationStatus='RanToCompletion', durationInMilliseconds='6', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 204,
+        "httpStatusMessage": "No Content",
+        "etag": "W/\u0022datetime\u00272021-10-29T06%3A24%3A28.1268463Z\u0027\u0022",
+        "serviceRequestID": "c4eac856-5002-00e3-638d-cc49a9000000",
+        "startTime": "2021-10-29T06:24:28.1209986Z",
+        "endTime": "2021-10-29T06:24:28.1277698Z"
+    }
+]', organizationId='', activityVector='IN.00', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='4499c250-4ee6-4e50-a7b6-11b11d81e70d'.
+2021-10-29T06: 24: 28.129 [Information
+] Workflow trigger starts. flowName='monitoredArrestLapp', triggerName='When_there_are_messages_in_a_queue', flowId='817b0dff4fae4e7f873702450cadad2a', flowSequenceId='08585661189034694682', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', status='', statusCode='', error='', durationInMilliseconds='-1', flowRunSequenceId='', inputsContentSize='-1', outputsContentSize='-1', clientTrackingId='', properties='{
+    "$schema": "2016-06-01",
+    "startTime": "2021-10-29T06:24:28.1294208Z",
+    "status": "Running",
+    "resource": {
+        "workflowId": "817b0dff4fae4e7f873702450cadad2a",
+        "workflowName": "monitoredArrestLapp",
+        "runId": "08585661182173481653320361220CU00",
+        "triggerName": "When_there_are_messages_in_a_queue"
+    },
+    "correlation": {}
+}', triggerType='ApiConnection', flowScaleUnit='cu00', triggerKind='', sourceTriggerHistoryName='', failureCause='', activityId='4499c250-4ee6-4e50-a7b6-11b11d81e70d'.
+2021-10-29T06: 24: 28.130 [Trace
+] Job debug message: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='FlowRetryableJobCallback.GetApiHubHttpAuthentication', jobPartition='817B0DFF4FAE4E7F873702450CADAD2A', jobId='FlowTriggerJob-WHEN: 5FTHERE: 5FARE: 5FMESSAGES: 5FIN: 5FA: 5FQUEUE', message='Calling apiHub APIM endpoint using connection key-based authentication provided in connection reference to target uri 'https: //8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/azurequeues/f93a9bac22154b389a0d00acc30a03c2/v2/storageAccounts/sandboxclearforceapi/queues/arrests/message_trigger'.', exception='<null>', organizationId='', activityVector='IN.0U', additionalProperties='{"ParentActivityId":"00-a80f0e3eceba794fa11b992aa5eb15dc-5403ceb3967c3946-00"}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='4499c250-4ee6-4e50-a7b6-11b11d81e70d'.
+2021-10-29T06: 24: 28.131 [Debug
+] Debug message: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='EdgeOAuthTokenProvider.GetToken', message='Retrive token from local managed identity store for workflow app system assigned managed identity with authenticationUri: http: //127.0.0.1:41850/MSI/token/ resource: https://management.core.windows.net/', exception='<null>', organizationId='', activityVector='IN.0U', additionalProperties='{"ParentActivityId":"00-a80f0e3eceba794fa11b992aa5eb15dc-5403ceb3967c3946-00"}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='4499c250-4ee6-4e50-a7b6-11b11d81e70d'.
+2021-10-29T06: 24: 28.131 [Debug
+] Outgoing HTTP request starts: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='GET/MSI/', httpMethod='GET', hostName='127.0.0.1', targetUri='http: //127.0.0.1:41850/MSI/token/?resource=https%3a%2f%2fmanagement.core.windows.net%2f&api-version=2019-08-01', clientRequestId='b3feede2198942d5b7a08707a90d2c21', clientSessionId='', clientApplicationId='', apiVersion='2019-08-01', contentLength='-1', serviceRequestId='', durationInMilliseconds='-1', httpStatusCode='-1', exceptionMessage='', errorCode='', errorMessage='', referer='<null>', failureCause='', contentType='', contentEncoding='', armServiceRequestId='', organizationId='', activityVector='IN.0V', locale='', additionalProperties='{"ParentActivityId":"00-a80f0e3eceba794fa11b992aa5eb15dc-5403ceb3967c3946-00"}', targetResourceProvider='', targetResourceType='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='4499c250-4ee6-4e50-a7b6-11b11d81e70d'.
+2021-10-29T06: 24: 28.133 [Debug
+] Outgoing HTTP request succeeded: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='GET/MSI/', httpMethod='GET', hostName='127.0.0.1', targetUri='http: //127.0.0.1:41850/MSI/token/?resource=https%3a%2f%2fmanagement.core.windows.net%2f&api-version=2019-08-01', clientRequestId='b3feede2198942d5b7a08707a90d2c21', clientSessionId='', clientApplicationId='', apiVersion='2019-08-01', contentLength='1656', serviceRequestId='', durationInMilliseconds='1', httpStatusCode='200', exceptionMessage='', errorCode='', errorMessage='', referer='<null>', failureCause='', contentType='', contentEncoding='', armServiceRequestId='', organizationId='', activityVector='IN.0V', locale='', additionalProperties='{"ParentActivityId":"00-a80f0e3eceba794fa11b992aa5eb15dc-5403ceb3967c3946-00"}', targetResourceProvider='', targetResourceType='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='4499c250-4ee6-4e50-a7b6-11b11d81e70d'.
+2021-10-29T06: 24: 28.133 [Debug
+] Debug message: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='EdgeOAuthTokenProvider.GetManagedIdentityToken', message='Successfully retrived managed identity oauth token for authenticationUri: http: //127.0.0.1:41850/MSI/token/ resource: https://management.core.windows.net/ tokenType Bearer', exception='<null>', organizationId='', activityVector='IN.0W', additionalProperties='{"ParentActivityId":"00-a80f0e3eceba794fa11b992aa5eb15dc-5403ceb3967c3946-00"}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='4499c250-4ee6-4e50-a7b6-11b11d81e70d'.
+2021-10-29T06: 24: 28.133 [Debug
+] Debug message: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='HttpRequestMessageExtensions.AddOAuthHeader', message='Sending request to 'https: //8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/' using OAuth with tenantId 'WorkflowAppSystemAssignedManagedIdentityTenant', clientId 'WorkflowAppSystemAssignedManagedIdentityClient' and audience 'https://management.core.windows.net/'.', exception='<null>', organizationId='', activityVector='IN.0W', additionalProperties='{"ParentActivityId":"00-a80f0e3eceba794fa11b992aa5eb15dc-5403ceb3967c3946-00"}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='4499c250-4ee6-4e50-a7b6-11b11d81e70d'.
+2021-10-29T06: 24: 28.133 [Debug
+] Outgoing HTTP request starts: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='CallApiHubEndpoint.Trigger.CustomApi/azurequeues', httpMethod='GET', hostName='8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net', targetUri='https: //8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/azurequeues/f93a9bac22154b389a0d00acc30a03c2/v2/storageAccounts/sandboxclearforceapi/queues/arrests/message_trigger', clientRequestId='4499c250-4ee6-4e50-a7b6-11b11d81e70d', clientSessionId='', clientApplicationId='', apiVersion='', contentLength='-1', serviceRequestId='', durationInMilliseconds='-1', httpStatusCode='-1', exceptionMessage='', errorCode='', errorMessage='', referer='<null>', failureCause='', contentType='', contentEncoding='', armServiceRequestId='', organizationId='', activityVector='IN.0X', locale='en-US', additionalProperties='{"ParentActivityId":"00-a80f0e3eceba794fa11b992aa5eb15dc-5403ceb3967c3946-00"}', targetResourceProvider='', targetResourceType='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='4499c250-4ee6-4e50-a7b6-11b11d81e70d'.
+2021-10-29T06: 24: 28.192 [Debug
+] Outgoing HTTP request succeeded: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='CallApiHubEndpoint.Trigger.CustomApi/azurequeues', httpMethod='GET', hostName='8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net', targetUri='https: //8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/azurequeues/f93a9bac22154b389a0d00acc30a03c2/v2/storageAccounts/sandboxclearforceapi/queues/arrests/message_trigger', clientRequestId='4499c250-4ee6-4e50-a7b6-11b11d81e70d', clientSessionId='', clientApplicationId='', apiVersion='', contentLength='0', serviceRequestId='10234890-4003-001d-278d-ccbe7f000000', durationInMilliseconds='58', httpStatusCode='202', exceptionMessage='', errorCode='', errorMessage='', referer='<null>', failureCause='', contentType='', contentEncoding='', armServiceRequestId='', organizationId='', activityVector='IN.0X', locale='en-US', additionalProperties='{"ParentActivityId":"00-a80f0e3eceba794fa11b992aa5eb15dc-5403ceb3967c3946-00"}', targetResourceProvider='', targetResourceType='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='4499c250-4ee6-4e50-a7b6-11b11d81e70d'.
+2021-10-29T06: 24: 28.192 [Trace
+] Job debug message: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='FlowRetryableTriggerJobCallback.HandleResponseMessage', jobPartition='817B0DFF4FAE4E7F873702450CADAD2A', jobId='FlowTriggerJob-WHEN: 5FTHERE: 5FARE: 5FMESSAGES: 5FIN: 5FA: 5FQUEUE', message='Received response with continuation. Original request uri: 'https: //8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/azurequeues/f93a9bac22154b389a0d00acc30a03c2/v2/storageAccounts/sandboxclearforceapi/queues/arrests/message_trigger'. Location header: 'https://8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/azurequeues/f93a9bac22154b389a0d00acc30a03c2/v2/storageAccounts/sandboxclearforceapi/queues/arrests/message_trigger'. Retry-after header: '60'.', exception='<null>', organizationId='', activityVector='IN.0Y', additionalProperties='{"ParentActivityId":"00-a80f0e3eceba794fa11b992aa5eb15dc-5403ceb3967c3946-00"}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='4499c250-4ee6-4e50-a7b6-11b11d81e70d'.
+2021-10-29T06: 24: 28.193 [Trace
+] Job debug message: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='FlowRecurrentTriggerJobCallback.UploadTriggerResultAndStartRun', jobPartition='817B0DFF4FAE4E7F873702450CADAD2A', jobId='FlowTriggerJob-WHEN: 5FTHERE: 5FARE: 5FMESSAGES: 5FIN: 5FA: 5FQUEUE', message='Completed execution of trigger callback. Status: 'Skipped'. Code: 'Accepted'. JobExecutionStatus: 'Succeeded'. Job version '3'.', exception='<null>', organizationId='', activityVector='IN.0Y', additionalProperties='{
+    "ParentActivityId": "00-a80f0e3eceba794fa11b992aa5eb15dc-5403ceb3967c3946-00"
+}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='4499c250-4ee6-4e50-a7b6-11b11d81e70d'.
+2021-10-29T06: 24: 28.194 [Trace
+] Job debug message: correlationId='', operationName='JobCallback.ExecuteAsync', jobPartition='817B0DFF4FAE4E7F873702450CADAD2A', jobId='FlowTriggerJob-WHEN: 5FTHERE: 5FARE: 5FMESSAGES: 5FIN: 5FA: 5FQUEUE', message='Background job operation 'ApiConnectionTriggerJob' completed with status 'Succeeded', message 'Accepted' and details '<null>' '66' milliseconds from start.', exception='<null>', organizationId='', activityVector='', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='4499c250-4ee6-4e50-a7b6-11b11d81e70d'.
+2021-10-29T06: 24: 28.207 [Trace
+] Storage operation completed: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='StorageDataProvider.Save.FlowTriggerHistory', accountName='storageaccountcfappb9ca', resourceType='table', resourceName='floweaffb5a68d273cf1452a520ba20957histories', clientRequestId='65f115ed-168e-40cf-a77f-6f56ba989b3f', operationStatus='RanToCompletion', durationInMilliseconds='10', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 204,
+        "httpStatusMessage": "No Content",
+        "etag": "W/\u0022datetime\u00272021-10-29T06%3A24%3A28.2038014Z\u0027\u0022",
+        "serviceRequestID": "c4eac87a-5002-00e3-038d-cc49a9000000",
+        "startTime": "2021-10-29T06:24:28.1958141Z",
+        "endTime": "2021-10-29T06:24:28.2068736Z"
+    }
+]', organizationId='', activityVector='IN.0V', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='4499c250-4ee6-4e50-a7b6-11b11d81e70d'.
+2021-10-29T06: 24: 28.207 [Information
+] Workflow trigger ends. flowName='monitoredArrestLapp', triggerName='When_there_are_messages_in_a_queue', flowId='817b0dff4fae4e7f873702450cadad2a', flowSequenceId='08585661189034694682', status='Skipped', statusCode='Accepted', error='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', durationInMilliseconds='66', flowRunSequenceId='', inputsContentSize='153', outputsContentSize='548', clientTrackingId='08585661182173481653320361220CU00', properties='{
+    "$schema": "2016-06-01",
+    "startTime": "2021-10-29T06:24:28.1294208Z",
+    "endTime": "2021-10-29T06:24:28.2073672Z",
+    "status": "Skipped",
+    "code": "Accepted",
+    "resource": {
+        "workflowId": "817b0dff4fae4e7f873702450cadad2a",
+        "workflowName": "monitoredArrestLapp",
+        "runId": "08585661182173481653320361220CU00",
+        "triggerName": "When_there_are_messages_in_a_queue"
+    },
+    "correlation": {
+        "clientTrackingId": "08585661182173481653320361220CU00"
+    }
+}', triggerType='ApiConnection', flowScaleUnit='cu00', triggerKind='', sourceTriggerHistoryName='', failureCause='', overrideUsageConfigurationName='', activityId='4499c250-4ee6-4e50-a7b6-11b11d81e70d'.
+2021-10-29T06: 24: 28.208 [Debug
+] Job history: jobPartition='817B0DFF4FAE4E7F873702450CADAD2A', jobId='FlowTriggerJob-WHEN: 5FTHERE: 5FARE: 5FMESSAGES: 5FIN: 5FA: 5FQUEUE', callback='ApiConnectionTriggerJob', startTime='Fri,
+29 Oct 2021 06: 24: 28 GMT', endTime='Fri,
+29 Oct 2021 06: 24: 28 GMT', executionTimeInMilliseconds='80.0381', executionDelayInMilliseconds='1142.3363', executionIntervalInMilliseconds='62677.704', executionStatus='Succeeded', executionMessage='Accepted', executionDetails='', nextExecutionTime='Fri,
+29 Oct 2021 06: 25: 28 GMT', correlationId='', dequeueCount='2', advanceVersion='False', triggerId='128def3d-45d3-46a1-b2ca-1c3d45e64838', messageId='c2a9c933-ed4a-46c3-9e3d-6705dd0e9ae5', state='Enabled', organizationId='', activityVector='', additionalProperties='', jobDurabilityLevel='Strong', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='4499c250-4ee6-4e50-a7b6-11b11d81e70d'.
+2021-10-29T06: 24: 28.217 [Trace
+] Storage operation completed: correlationId='', operationName='BackgroundJobsDataProvider.UpdateJobDefinition', accountName='storageaccountcfappb9ca', resourceType='table', resourceName='floweaffb5a68d273cfjobdefinitions', clientRequestId='8641e94b-b047-4bbe-b383-23c322790013', operationStatus='RanToCompletion', durationInMilliseconds='7', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 204,
+        "httpStatusMessage": "No Content",
+        "etag": "W/\u0022datetime\u00272021-10-29T06%3A24%3A28.2167939Z\u0027\u0022",
+        "serviceRequestID": "c4eac885-5002-00e3-0a8d-cc49a9000000",
+        "startTime": "2021-10-29T06:24:28.2092609Z",
+        "endTime": "2021-10-29T06:24:28.2173551Z"
+    }
+]', organizationId='', activityVector='IN.00', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='4499c250-4ee6-4e50-a7b6-11b11d81e70d'.
+2021-10-29T06: 24: 28.224 [Trace
+] Storage operation completed: correlationId='', operationName='BackgroundJobsDataProvider.UpdateJobTriggerVisibilityDelay', accountName='storageaccountcfappb9ca', resourceType='queue', resourceName='floweaffb5a68d273cfjobtriggers00', clientRequestId='7f8694c9-c725-4a81-a71f-3df2d8114ed2', operationStatus='RanToCompletion', durationInMilliseconds='6', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 204,
+        "httpStatusMessage": "No Content",
+        "serviceRequestID": "74d2e0da-b003-0084-428d-ccfa0e000000",
+        "startTime": "2021-10-29T06:24:28.2176249Z",
+        "endTime": "2021-10-29T06:24:28.2243306Z"
+    }
+]', organizationId='', activityVector='IN.00', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='4499c250-4ee6-4e50-a7b6-11b11d81e70d'.
+2021-10-29T06: 24: 30.305 [Information
+] Stopping JobHost
+2021-10-29T06: 24: 30.307 [Information
+] Job host stopped
+2021-10-29T06: 24: 30.323 [Information
+] Service stopping: serviceName='Microsoft-Azure-Workflows', version='1.0.0', name='', value='', message='Stopping the runtime with environment name 'Microsoft-Azure-Workflows', Number of cores: '2'. Memory: '115400704'.', correlationId='', organizationId='', activityVector='', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='00000000-0000-0000-0000-000000000000'.
+2021-10-29T06: 24: 30.323 [Information
+] Service stopped: serviceName='Microsoft-Azure-Workflows', version='1.0.0', name='', value='', message='Stopped the runtime with environment name 'Microsoft-Azure-Workflows'.', correlationId='', organizationId='', activityVector='', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='00000000-0000-0000-0000-000000000000'.
+2021-10-29T06: 24: 30.323 [Information
+] Service stopping: serviceName='Microsoft-Azure-Workflows', version='1.0.0', name='', value='', message='Stopping the runtime with environment name 'Microsoft-Azure-Workflows', Number of cores: '2'. Memory: '115417088'.', correlationId='', organizationId='', activityVector='', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='00000000-0000-0000-0000-000000000000'.
+2021-10-29T06: 24: 30.323 [Information
+] Service stopped: serviceName='Microsoft-Azure-Workflows', version='1.0.0', name='', value='', message='Stopped the runtime with environment name 'Microsoft-Azure-Workflows'.', correlationId='', organizationId='', activityVector='', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='00000000-0000-0000-0000-000000000000'.
+2021-10-29T06: 25: 12.426 [Information
+] Host Status: {
+    "id": "cfmonitoredarrestslapp",
+    "state": "Running",
+    "version": "3.3.1.0",
+    "versionDetails": "3.3.1 Commit hash: bd2b318013cee8d608c88203ec4ee3516d2a9961",
+    "platformVersion": "95.0.7.554",
+    "instanceId": "6434eb4bb5d8ded286308b187ea4105e787e1cd54bfe287fe116e71a375e9837",
+    "computerName": "pd1mdwk0001H6",
+    "processUptime": 1390297,
+    "extensionBundle": {
+        "id": "Microsoft.Azure.Functions.ExtensionBundle.Workflows",
+        "version": "1.1.27"
+    }
+}
+2021-10-29T06: 25: 12.643 [Information
+] Host Status: {
+    "id": "cfmonitoredarrestslapp",
+    "state": "Running",
+    "version": "3.3.1.0",
+    "versionDetails": "3.3.1 Commit hash: bd2b318013cee8d608c88203ec4ee3516d2a9961",
+    "platformVersion": "95.0.7.554",
+    "instanceId": "6434eb4bb5d8ded286308b187ea4105e787e1cd54bfe287fe116e71a375e9837",
+    "computerName": "pd1mdwk0001H6",
+    "processUptime": 1390514,
+    "extensionBundle": {
+        "id": "Microsoft.Azure.Functions.ExtensionBundle.Workflows",
+        "version": "1.1.27"
+    }
+}
+2021-10-29T06: 25: 14.895 [Information
+] Host Status: {
+    "id": "cfmonitoredarrestslapp",
+    "state": "Running",
+    "version": "3.3.1.0",
+    "versionDetails": "3.3.1 Commit hash: bd2b318013cee8d608c88203ec4ee3516d2a9961",
+    "platformVersion": "95.0.7.554",
+    "instanceId": "6434eb4bb5d8ded286308b187ea4105e787e1cd54bfe287fe116e71a375e9837",
+    "computerName": "pd1mdwk0001H6",
+    "processUptime": 1392767,
+    "extensionBundle": {
+        "id": "Microsoft.Azure.Functions.ExtensionBundle.Workflows",
+        "version": "1.1.27"
+    }
+}
+2021-10-29T06: 25: 14.915 [Information
+] Host Status: {
+    "id": "cfmonitoredarrestslapp",
+    "state": "Running",
+    "version": "3.3.1.0",
+    "versionDetails": "3.3.1 Commit hash: bd2b318013cee8d608c88203ec4ee3516d2a9961",
+    "platformVersion": "95.0.7.554",
+    "instanceId": "6434eb4bb5d8ded286308b187ea4105e787e1cd54bfe287fe116e71a375e9837",
+    "computerName": "pd1mdwk0001H6",
+    "processUptime": 1392787,
+    "extensionBundle": {
+        "id": "Microsoft.Azure.Functions.ExtensionBundle.Workflows",
+        "version": "1.1.27"
+    }
+}
+2021-10-29T06: 25: 28.895 [Trace
+] Storage operation completed: correlationId='', operationName='BackgroundJobsDataProvider.UpdateJobDefinition', accountName='storageaccountcfappb9ca', resourceType='table', resourceName='floweaffb5a68d273cfjobdefinitions', clientRequestId='3408208a-cec7-48bd-b07b-9220e4d3d671', operationStatus='RanToCompletion', durationInMilliseconds='7', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 204,
+        "httpStatusMessage": "No Content",
+        "etag": "W/\u0022datetime\u00272021-10-29T06%3A25%3A28.8924557Z\u0027\u0022",
+        "serviceRequestID": "c4eb0ba8-5002-00e3-078d-cc49a9000000",
+        "startTime": "2021-10-29T06:25:28.8877816Z",
+        "endTime": "2021-10-29T06:25:28.8949550Z"
+    }
+]', organizationId='', activityVector='IN.00', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='370c5737-23b1-42f7-a89f-f87f17143416'.
+2021-10-29T06: 25: 28.902 [Trace
+] Storage operation completed: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='StorageDataProvider.Find.FlowRuntimeContext', accountName='storageaccountcfappb9ca', resourceType='table', resourceName='floweaffb5a68d273cfflowruntimecontext', clientRequestId='a3c61e52-3f41-481f-b85f-2de9158c0fbe', operationStatus='RanToCompletion', durationInMilliseconds='5', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 200,
+        "httpStatusMessage": "OK",
+        "etag": "W/\u0022datetime\u00272021-10-29T06%3A23%3A03.3899374Z\u0027\u0022",
+        "serviceRequestID": "c4eb0bac-5002-00e3-0b8d-cc49a9000000",
+        "startTime": "2021-10-29T06:25:28.8965868Z",
+        "endTime": "2021-10-29T06:25:28.9024967Z"
+    }
+]', organizationId='', activityVector='IN.0V', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='370c5737-23b1-42f7-a89f-f87f17143416'.
+2021-10-29T06: 25: 28.903 [Information
+] Workflow trigger starts. flowName='monitoredArrestLapp', triggerName='When_there_are_messages_in_a_queue', flowId='817b0dff4fae4e7f873702450cadad2a', flowSequenceId='08585661189034694682', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', status='', statusCode='', error='', durationInMilliseconds='-1', flowRunSequenceId='', inputsContentSize='-1', outputsContentSize='-1', clientTrackingId='', properties='{
+    "$schema": "2016-06-01",
+    "startTime": "2021-10-29T06:25:28.9032709Z",
+    "status": "Running",
+    "resource": {
+        "workflowId": "817b0dff4fae4e7f873702450cadad2a",
+        "workflowName": "monitoredArrestLapp",
+        "runId": "08585661181565743151224367522CU00",
+        "triggerName": "When_there_are_messages_in_a_queue"
+    },
+    "correlation": {}
+}', triggerType='ApiConnection', flowScaleUnit='cu00', triggerKind='', sourceTriggerHistoryName='', failureCause='', activityId='370c5737-23b1-42f7-a89f-f87f17143416'.
+2021-10-29T06: 25: 28.904 [Trace
+] Job debug message: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='FlowRetryableJobCallback.GetApiHubHttpAuthentication', jobPartition='817B0DFF4FAE4E7F873702450CADAD2A', jobId='FlowTriggerJob-WHEN: 5FTHERE: 5FARE: 5FMESSAGES: 5FIN: 5FA: 5FQUEUE', message='Calling apiHub APIM endpoint using connection key-based authentication provided in connection reference to target uri 'https: //8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/azurequeues/f93a9bac22154b389a0d00acc30a03c2/v2/storageAccounts/sandboxclearforceapi/queues/arrests/message_trigger'.', exception='<null>', organizationId='', activityVector='IN.0U', additionalProperties='{"ParentActivityId":"00-21fed6ddf8bf8d4ebea8aef1d476d0d2-ef0949ddfdd2cd4a-00"}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='370c5737-23b1-42f7-a89f-f87f17143416'.
+2021-10-29T06: 25: 28.904 [Debug
+] Debug message: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='EdgeOAuthTokenProvider.GetToken', message='Retrive token from local managed identity store for workflow app system assigned managed identity with authenticationUri: http: //127.0.0.1:41850/MSI/token/ resource: https://management.core.windows.net/', exception='<null>', organizationId='', activityVector='IN.0U', additionalProperties='{"ParentActivityId":"00-21fed6ddf8bf8d4ebea8aef1d476d0d2-ef0949ddfdd2cd4a-00"}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='370c5737-23b1-42f7-a89f-f87f17143416'.
+2021-10-29T06: 25: 28.905 [Debug
+] Outgoing HTTP request starts: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='GET/MSI/', httpMethod='GET', hostName='127.0.0.1', targetUri='http: //127.0.0.1:41850/MSI/token/?resource=https%3a%2f%2fmanagement.core.windows.net%2f&api-version=2019-08-01', clientRequestId='0d05797d77df4915a34a90c66f5672f3', clientSessionId='', clientApplicationId='', apiVersion='2019-08-01', contentLength='-1', serviceRequestId='', durationInMilliseconds='-1', httpStatusCode='-1', exceptionMessage='', errorCode='', errorMessage='', referer='<null>', failureCause='', contentType='', contentEncoding='', armServiceRequestId='', organizationId='', activityVector='IN.0V', locale='', additionalProperties='{"ParentActivityId":"00-21fed6ddf8bf8d4ebea8aef1d476d0d2-ef0949ddfdd2cd4a-00"}', targetResourceProvider='', targetResourceType='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='370c5737-23b1-42f7-a89f-f87f17143416'.
+2021-10-29T06: 25: 28.906 [Debug
+] Outgoing HTTP request succeeded: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='GET/MSI/', httpMethod='GET', hostName='127.0.0.1', targetUri='http: //127.0.0.1:41850/MSI/token/?resource=https%3a%2f%2fmanagement.core.windows.net%2f&api-version=2019-08-01', clientRequestId='0d05797d77df4915a34a90c66f5672f3', clientSessionId='', clientApplicationId='', apiVersion='2019-08-01', contentLength='1656', serviceRequestId='', durationInMilliseconds='1', httpStatusCode='200', exceptionMessage='', errorCode='', errorMessage='', referer='<null>', failureCause='', contentType='', contentEncoding='', armServiceRequestId='', organizationId='', activityVector='IN.0V', locale='', additionalProperties='{"ParentActivityId":"00-21fed6ddf8bf8d4ebea8aef1d476d0d2-ef0949ddfdd2cd4a-00"}', targetResourceProvider='', targetResourceType='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='370c5737-23b1-42f7-a89f-f87f17143416'.
+2021-10-29T06: 25: 28.906 [Debug
+] Debug message: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='EdgeOAuthTokenProvider.GetManagedIdentityToken', message='Successfully retrived managed identity oauth token for authenticationUri: http: //127.0.0.1:41850/MSI/token/ resource: https://management.core.windows.net/ tokenType Bearer', exception='<null>', organizationId='', activityVector='IN.0W', additionalProperties='{"ParentActivityId":"00-21fed6ddf8bf8d4ebea8aef1d476d0d2-ef0949ddfdd2cd4a-00"}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='370c5737-23b1-42f7-a89f-f87f17143416'.
+2021-10-29T06: 25: 28.907 [Debug
+] Debug message: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='HttpRequestMessageExtensions.AddOAuthHeader', message='Sending request to 'https: //8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/' using OAuth with tenantId 'WorkflowAppSystemAssignedManagedIdentityTenant', clientId 'WorkflowAppSystemAssignedManagedIdentityClient' and audience 'https://management.core.windows.net/'.', exception='<null>', organizationId='', activityVector='IN.0W', additionalProperties='{"ParentActivityId":"00-21fed6ddf8bf8d4ebea8aef1d476d0d2-ef0949ddfdd2cd4a-00"}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='370c5737-23b1-42f7-a89f-f87f17143416'.
+2021-10-29T06: 25: 28.907 [Debug
+] Outgoing HTTP request starts: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='CallApiHubEndpoint.Trigger.CustomApi/azurequeues', httpMethod='GET', hostName='8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net', targetUri='https: //8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/azurequeues/f93a9bac22154b389a0d00acc30a03c2/v2/storageAccounts/sandboxclearforceapi/queues/arrests/message_trigger', clientRequestId='370c5737-23b1-42f7-a89f-f87f17143416', clientSessionId='', clientApplicationId='', apiVersion='', contentLength='-1', serviceRequestId='', durationInMilliseconds='-1', httpStatusCode='-1', exceptionMessage='', errorCode='', errorMessage='', referer='<null>', failureCause='', contentType='', contentEncoding='', armServiceRequestId='', organizationId='', activityVector='IN.0X', locale='en-US', additionalProperties='{"ParentActivityId":"00-21fed6ddf8bf8d4ebea8aef1d476d0d2-ef0949ddfdd2cd4a-00"}', targetResourceProvider='', targetResourceType='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='370c5737-23b1-42f7-a89f-f87f17143416'.
+2021-10-29T06: 25: 28.915 [Debug
+] Outgoing HTTP request succeeded: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='CallApiHubEndpoint.Trigger.CustomApi/azurequeues', httpMethod='GET', hostName='8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net', targetUri='https: //8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/azurequeues/f93a9bac22154b389a0d00acc30a03c2/v2/storageAccounts/sandboxclearforceapi/queues/arrests/message_trigger', clientRequestId='370c5737-23b1-42f7-a89f-f87f17143416', clientSessionId='', clientApplicationId='', apiVersion='', contentLength='0', serviceRequestId='10235bed-4003-001d-118d-ccbe7f000000', durationInMilliseconds='7', httpStatusCode='202', exceptionMessage='', errorCode='', errorMessage='', referer='<null>', failureCause='', contentType='', contentEncoding='', armServiceRequestId='', organizationId='', activityVector='IN.0X', locale='en-US', additionalProperties='{"ParentActivityId":"00-21fed6ddf8bf8d4ebea8aef1d476d0d2-ef0949ddfdd2cd4a-00"}', targetResourceProvider='', targetResourceType='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='370c5737-23b1-42f7-a89f-f87f17143416'.
+2021-10-29T06: 25: 28.915 [Trace
+] Job debug message: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='FlowRetryableTriggerJobCallback.HandleResponseMessage', jobPartition='817B0DFF4FAE4E7F873702450CADAD2A', jobId='FlowTriggerJob-WHEN: 5FTHERE: 5FARE: 5FMESSAGES: 5FIN: 5FA: 5FQUEUE', message='Received response with continuation. Original request uri: 'https: //8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/azurequeues/f93a9bac22154b389a0d00acc30a03c2/v2/storageAccounts/sandboxclearforceapi/queues/arrests/message_trigger'. Location header: 'https://8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/azurequeues/f93a9bac22154b389a0d00acc30a03c2/v2/storageAccounts/sandboxclearforceapi/queues/arrests/message_trigger'. Retry-after header: '60'.', exception='<null>', organizationId='', activityVector='IN.0Y', additionalProperties='{"ParentActivityId":"00-21fed6ddf8bf8d4ebea8aef1d476d0d2-ef0949ddfdd2cd4a-00"}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='370c5737-23b1-42f7-a89f-f87f17143416'.
+2021-10-29T06: 25: 28.915 [Trace
+] Job debug message: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='FlowRecurrentTriggerJobCallback.UploadTriggerResultAndStartRun', jobPartition='817B0DFF4FAE4E7F873702450CADAD2A', jobId='FlowTriggerJob-WHEN: 5FTHERE: 5FARE: 5FMESSAGES: 5FIN: 5FA: 5FQUEUE', message='Completed execution of trigger callback. Status: 'Skipped'. Code: 'Accepted'. JobExecutionStatus: 'Succeeded'. Job version '3'.', exception='<null>', organizationId='', activityVector='IN.0Y', additionalProperties='{
+    "ParentActivityId": "00-21fed6ddf8bf8d4ebea8aef1d476d0d2-ef0949ddfdd2cd4a-00"
+}', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='370c5737-23b1-42f7-a89f-f87f17143416'.
+2021-10-29T06: 25: 28.917 [Trace
+] Job debug message: correlationId='', operationName='JobCallback.ExecuteAsync', jobPartition='817B0DFF4FAE4E7F873702450CADAD2A', jobId='FlowTriggerJob-WHEN: 5FTHERE: 5FARE: 5FMESSAGES: 5FIN: 5FA: 5FQUEUE', message='Background job operation 'ApiConnectionTriggerJob' completed with status 'Succeeded', message 'Accepted' and details '<null>' '22' milliseconds from start.', exception='<null>', organizationId='', activityVector='', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='370c5737-23b1-42f7-a89f-f87f17143416'.
+2021-10-29T06: 25: 28.926 [Trace
+] Storage operation completed: correlationId='ffc05266-4688-4687-8581-e52f9f031405', operationName='StorageDataProvider.Save.FlowTriggerHistory', accountName='storageaccountcfappb9ca', resourceType='table', resourceName='floweaffb5a68d273cf1452a520ba20957histories', clientRequestId='44db1255-e7d5-470e-b4e0-25c4de83ed7e', operationStatus='RanToCompletion', durationInMilliseconds='7', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 204,
+        "httpStatusMessage": "No Content",
+        "etag": "W/\u0022datetime\u00272021-10-29T06%3A25%3A28.925437Z\u0027\u0022",
+        "serviceRequestID": "c4eb0bb6-5002-00e3-118d-cc49a9000000",
+        "startTime": "2021-10-29T06:25:28.9184572Z",
+        "endTime": "2021-10-29T06:25:28.9260550Z"
+    }
+]', organizationId='', activityVector='IN.0V', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='370c5737-23b1-42f7-a89f-f87f17143416'.
+2021-10-29T06: 25: 28.926 [Information
+] Workflow trigger ends. flowName='monitoredArrestLapp', triggerName='When_there_are_messages_in_a_queue', flowId='817b0dff4fae4e7f873702450cadad2a', flowSequenceId='08585661189034694682', status='Skipped', statusCode='Accepted', error='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', durationInMilliseconds='15', flowRunSequenceId='', inputsContentSize='153', outputsContentSize='548', clientTrackingId='08585661181565743151224367522CU00', properties='{
+    "$schema": "2016-06-01",
+    "startTime": "2021-10-29T06:25:28.9032709Z",
+    "endTime": "2021-10-29T06:25:28.9263324Z",
+    "status": "Skipped",
+    "code": "Accepted",
+    "resource": {
+        "workflowId": "817b0dff4fae4e7f873702450cadad2a",
+        "workflowName": "monitoredArrestLapp",
+        "runId": "08585661181565743151224367522CU00",
+        "triggerName": "When_there_are_messages_in_a_queue"
+    },
+    "correlation": {
+        "clientTrackingId": "08585661181565743151224367522CU00"
+    }
+}', triggerType='ApiConnection', flowScaleUnit='cu00', triggerKind='', sourceTriggerHistoryName='', failureCause='', overrideUsageConfigurationName='', activityId='370c5737-23b1-42f7-a89f-f87f17143416'.
+2021-10-29T06: 25: 28.927 [Debug
+] Job history: jobPartition='817B0DFF4FAE4E7F873702450CADAD2A', jobId='FlowTriggerJob-WHEN: 5FTHERE: 5FARE: 5FMESSAGES: 5FIN: 5FA: 5FQUEUE', callback='ApiConnectionTriggerJob', startTime='Fri,
+29 Oct 2021 06: 25: 28 GMT', endTime='Fri,
+29 Oct 2021 06: 25: 28 GMT', executionTimeInMilliseconds='31.8271', executionDelayInMilliseconds='702.3591', executionIntervalInMilliseconds='60767.1743', executionStatus='Succeeded', executionMessage='Accepted', executionDetails='', nextExecutionTime='Fri,
+29 Oct 2021 06: 26: 28 GMT', correlationId='', dequeueCount='3', advanceVersion='False', triggerId='128def3d-45d3-46a1-b2ca-1c3d45e64838', messageId='c2a9c933-ed4a-46c3-9e3d-6705dd0e9ae5', state='Enabled', organizationId='', activityVector='', additionalProperties='', jobDurabilityLevel='Strong', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='370c5737-23b1-42f7-a89f-f87f17143416'.
+2021-10-29T06: 25: 28.935 [Trace
+] Storage operation completed: correlationId='', operationName='BackgroundJobsDataProvider.UpdateJobDefinition', accountName='storageaccountcfappb9ca', resourceType='table', resourceName='floweaffb5a68d273cfjobdefinitions', clientRequestId='8da8ad8f-730e-4cd2-b26f-55fedc4b924a', operationStatus='RanToCompletion', durationInMilliseconds='6', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 204,
+        "httpStatusMessage": "No Content",
+        "etag": "W/\u0022datetime\u00272021-10-29T06%3A25%3A28.9334319Z\u0027\u0022",
+        "serviceRequestID": "c4eb0bbb-5002-00e3-138d-cc49a9000000",
+        "startTime": "2021-10-29T06:25:28.9281981Z",
+        "endTime": "2021-10-29T06:25:28.9350419Z"
+    }
+]', organizationId='', activityVector='IN.00', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='370c5737-23b1-42f7-a89f-f87f17143416'.
+2021-10-29T06: 25: 28.939 [Trace
+] Storage operation completed: correlationId='', operationName='BackgroundJobsDataProvider.UpdateJobTriggerVisibilityDelay', accountName='storageaccountcfappb9ca', resourceType='queue', resourceName='floweaffb5a68d273cfjobtriggers00', clientRequestId='a2951cee-a319-4471-b0b0-1fcf16273cb9', operationStatus='RanToCompletion', durationInMilliseconds='4', exceptionMessage='', requestsStarted='1', requestsCompleted='1', requestsTimedout='0', requestsDetails='[
+    {
+        "httpStatusCode": 204,
+        "httpStatusMessage": "No Content",
+        "serviceRequestID": "74d3b9de-b003-0084-118d-ccfa0e000000",
+        "startTime": "2021-10-29T06:25:28.9353108Z",
+        "endTime": "2021-10-29T06:25:28.9397663Z"
+    }
+]', organizationId='', activityVector='IN.00', ingressBytes='0', egressBytes='0', additionalProperties='', extensionVersion='1.0.0.0', siteName='cfMonitoredArrestsLapp', slotName='Production', activityId='370c5737-23b1-42f7-a89f-f87f17143416'.
