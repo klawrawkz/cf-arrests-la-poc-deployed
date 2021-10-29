@@ -1,0 +1,58 @@
+{
+    "version": "2.0",
+    "logging": {
+        "console":{
+            "isEnabled":true,
+            "DisableColors":false
+        },
+        "applicationInsights": {
+            "samplingSettings": {
+                "isEnabled": false,
+                "excludedTypes": "Request"
+            }
+        },
+        "fileLoggingMode": "always",
+        "logLevel": {
+            "Host.Triggers.Workflows":"Trace"
+        },
+        "enableLiveMetrics": true,
+        "enableDependencyTracking": true,
+        "enablePerformanceCountersCollection": true,
+        "httpAutoCollectionOptions": {
+            "enableHttpTriggerExtendedInfoCollection": true,
+            "enableW3CDistributedTracing": true,
+            "enableResponseHeaderInjection": true
+        },
+        "snapshotConfiguration": {
+            "agentEndpoint": null,
+            "captureSnapshotMemoryWeight": 0.5,
+            "failedRequestLimit": 3,
+            "handleUntrackedExceptions": true,
+            "isEnabled": true,
+            "isEnabledInDeveloperMode": false,
+            "isEnabledWhenProfiling": true,
+            "isExceptionSnappointsEnabled": false,
+            "isLowPrioritySnapshotUploader": true,
+            "maximumCollectionPlanSize": 50,
+            "maximumSnapshotsRequired": 3,
+            "problemCounterResetInterval": "24:00:00",
+            "provideAnonymousTelemetry": true,
+            "reconnectInterval": "00:15:00",
+            "shadowCopyFolder": null,
+            "shareUploaderProcess": true,
+            "snapshotInLowPriorityThread": true,
+            "snapshotsPerDayLimit": 30,
+            "snapshotsPerTenMinutesLimit": 2,
+            "tempFolder": null,
+            "thresholdForSnapshotting": 1,
+            "uploaderProxy": null
+        }
+    },
+    "healthMonitor": {
+        "enabled": true,
+        "healthCheckInterval": "00:00:10",
+        "healthCheckWindow": "00:02:00",
+        "healthCheckThreshold": 6,
+        "counterThreshold": 0.80
+    }
+}

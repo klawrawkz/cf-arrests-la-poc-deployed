@@ -1,0 +1,102 @@
+{
+    "managedApiConnections": {
+        "azurequeues": {
+            "api": {
+                "id": "/subscriptions/ab603228-3612-44fb-8847-c844cc805171/providers/Microsoft.Web/locations/eastus2/managedApis/azurequeues"
+            },
+            "authentication": {
+                "type": "ManagedServiceIdentity"
+            },
+            "connection": {
+                "id": "/subscriptions/ab603228-3612-44fb-8847-c844cc805171/resourceGroups/cf-app-insights-la-poc/providers/Microsoft.Web/connections/azurequeues"
+            },
+            "connectionRuntimeUrl": "https://8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/azurequeues/35af6d704b99412dbff25b7ebc5545b7"
+        },
+        "azurequeues_1": {
+            "api": {
+                "id": "/subscriptions/ab603228-3612-44fb-8847-c844cc805171/providers/Microsoft.Web/locations/eastus2/managedApis/azurequeues"
+            },
+            "authentication": {
+                "type": "ManagedServiceIdentity"
+            },
+            "connection": {
+                "id": "/subscriptions/ab603228-3612-44fb-8847-c844cc805171/resourceGroups/cf-app-insights-la-poc/providers/Microsoft.Web/connections/azurequeues-4"
+            },
+            "connectionRuntimeUrl": "https://8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/azurequeues/3feb1d43dca44db48819692bae4c5a1f/"
+        },
+        "azurequeues_2": {
+            "api": {
+                "id": "/subscriptions/ab603228-3612-44fb-8847-c844cc805171/providers/Microsoft.Web/locations/eastus2/managedApis/azurequeues"
+            },
+            "authentication": {
+                "type": "ManagedServiceIdentity"
+            },
+            "connection": {
+                "id": "/subscriptions/ab603228-3612-44fb-8847-c844cc805171/resourceGroups/cf-app-insights-la-poc/providers/Microsoft.Web/connections/azurequeues-5"
+            },
+            "connectionRuntimeUrl": "https://8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/azurequeues/f93a9bac22154b389a0d00acc30a03c2"
+        },
+        "office365": {
+            "api": {
+                "id": "/subscriptions/ab603228-3612-44fb-8847-c844cc805171/providers/Microsoft.Web/locations/eastus2/managedApis/office365"
+            },
+            "authentication": {
+                "type": "ManagedServiceIdentity"
+            },
+            "connection": {
+                "id": "/subscriptions/ab603228-3612-44fb-8847-c844cc805171/resourceGroups/cf-app-insights-la-poc/providers/Microsoft.Web/connections/office365"
+            },
+            "connectionRuntimeUrl": "https://8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/office365/80d2845101f9452383460dd10a438403/"
+        },
+        "office365_1": {
+            "api": {
+                "id": "/subscriptions/ab603228-3612-44fb-8847-c844cc805171/providers/Microsoft.Web/locations/eastus2/managedApis/office365"
+            },
+            "authentication": {
+                "type": "ManagedServiceIdentity"
+            },
+            "connection": {
+                "id": "/subscriptions/ab603228-3612-44fb-8847-c844cc805171/resourceGroups/cf-app-insights-la-poc/providers/Microsoft.Web/connections/office365-2"
+            },
+            "connectionRuntimeUrl": "https://8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/office365/695cf9d823b34467916b29403b7b4c24/"
+        },
+        "sql_1": {
+            "api": {
+                "id": "/subscriptions/ab603228-3612-44fb-8847-c844cc805171/providers/Microsoft.Web/locations/eastus2/managedApis/sql"
+            },
+            "authentication": {
+                "type": "ManagedServiceIdentity"
+            },
+            "connection": {
+                "id": "/subscriptions/ab603228-3612-44fb-8847-c844cc805171/resourceGroups/cf-app-insights-la-poc/providers/Microsoft.Web/connections/sql-2"
+            },
+            "connectionRuntimeUrl": "https://8edef5c8e525a860.11.common.logic-eastus2.azure-apihub.net/apim/sql/d4594cf99b8741a5b3dfb58b9da09fb1/"
+        }
+    },
+    "functionConnections": {
+        "azureFunctionOperation": {
+            "function": {
+                "id": "/subscriptions/ab603228-3612-44fb-8847-c844cc805171/resourceGroups/CF_SANDBOX_RG/providers/Microsoft.Web/sites/sandboxclearforcefunctionsv3/functions/SendGridTemplateFunction"
+            },
+            "triggerUrl": "https://sandboxclearforcefunctionsv3.azurewebsites.net/api/sendgridtemplatefunction",
+            "authentication": {
+                "type": "QueryString",
+                "name": "Code",
+                "value": "@appsetting('azureFunctionOperation_functionAppKey')"
+            },
+            "displayName": "cf-conn-send-grid-email-func-poc-001"
+        },
+        "azureFunctionOperation-2": {
+            "function": {
+                "id": "/subscriptions/ab603228-3612-44fb-8847-c844cc805171/resourceGroups/CF_STAGING_RGDT/providers/Microsoft.Web/sites/stagingclearforcefunctionsv3/functions/SendGridTemplateFunction"
+            },
+            "triggerUrl": "https://stagingclearforcefunctionsv3.azurewebsites.net/api/sendgridtemplatefunction",
+            "authentication": {
+                "type": "QueryString",
+                "name": "Code",
+                "value": "@appsetting('azureFunctionOperation_12_functionAppKey')"
+            },
+            "displayName": "sandbox-cfV3SendGridTmpltFunc-conn"
+        }
+    }
+}
